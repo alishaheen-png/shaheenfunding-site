@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shaheenfunding.com/sitemap.xml

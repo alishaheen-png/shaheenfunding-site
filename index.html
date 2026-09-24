@@ -6,159 +6,355 @@
 <title>Shaheen Funding | Funding advisory for UAE businesses</title>
 <meta name="description" content="Independent funding advisers for UAE businesses. Access to 10+ UAE banks and specialist financiers, from working capital to large long-term facilities.">
 <link rel="canonical" href="https://shaheenfunding.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Shaheen Funding">
+<meta property="og:title" content="Shaheen Funding | Funding advisory for UAE businesses">
+<meta property="og:description" content="Independent funding advisers for UAE businesses. Access to 10+ UAE banks and specialist financiers, from working capital to large long-term facilities.">
+<meta property="og:url" content="https://shaheenfunding.com/">
+<meta property="og:image" content="https://shaheenfunding.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#faf9f5">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Shaheen Funding",
+"url":"https://shaheenfunding.com/","email":"asser@shaheenfunding.com","areaServed":"AE",
+"description":"Independent funding advisers for UAE businesses, connected to 10+ UAE banks and specialist financiers, from working capital to large long-term facilities."}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.css">
 <style>:root{--ivory-light:#faf9f5;--ivory-medium:#f0eee6;--ivory-dark:#e8e6dc;--slate-dark:#141413;
 --slate-medium:#3d3d3a;--slate-light:#5e5d59;--cloud-medium:#b0aea5;--clay:#d97757;--accent:#c6613f;
---serif:"Source Serif 4",Georgia,serif;--sans:"Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
-*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{margin:0;background:var(--ivory-light);color:var(--slate-dark);font:400 17px/1.65 var(--sans);
+--serif:"Source Serif 4",Georgia,serif;--sans:"Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+--fs-display:clamp(40px,6.4vw,76px);--fs-h2:clamp(30px,4vw,46px);--fs-h3:24px;
+--fs-lead:clamp(18px,1.6vw,20px);--fs-body:17px;--fs-sm:15px;--fs-label:12px;--fs-stat:clamp(28px,3vw,36px)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:84px}
+body{margin:0;background:var(--ivory-light);color:var(--slate-dark);font:400 var(--fs-body)/1.65 var(--sans);
 -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 a{color:var(--slate-dark);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;
-text-decoration-color:var(--cloud-medium)}a:hover{text-decoration-color:var(--slate-dark)}
-a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+text-decoration-color:var(--slate-light);transition:text-decoration-color .2s ease}
+a:hover{text-decoration-color:var(--slate-dark)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .w{max-width:1120px;margin:0 auto;padding:0 28px}
 header{position:sticky;top:0;z-index:5;background:rgba(250,249,245,.92);backdrop-filter:blur(8px);
-border-bottom:1px solid var(--ivory-dark)}
+border-bottom:1px solid var(--ivory-dark);transition:background-color .2s ease,border-color .2s ease}
+header.scrolled{background:rgba(250,249,245,.97);border-bottom-color:#dcd9cc}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:20px;height:68px}
-.word{font:500 21px/1 var(--serif);letter-spacing:-.01em;text-decoration:none;display:inline-flex;align-items:center;gap:10px}
+.word{font:500 21px/1 var(--serif);letter-spacing:-.01em;text-decoration:none;display:inline-flex;align-items:center;
+gap:10px;white-space:nowrap;transition:color .2s ease}
 .word i{width:10px;height:10px;border-radius:50%;background:var(--clay);display:inline-block}
-nav{display:flex;gap:26px;font-size:15px}nav a{text-decoration:none;color:var(--slate-medium)}
+nav{flex:1;display:flex;justify-content:center;gap:26px;font-size:var(--fs-sm)}
+nav a{text-decoration:none;color:var(--slate-medium);position:relative;padding:6px 0;transition:color .2s ease}
 nav a:hover{color:var(--slate-dark)}
+nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--accent);
+transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+nav a.active{color:var(--slate-dark)}
+nav a.active::after{transform:scaleX(1)}
 .btn{display:inline-block;padding:13px 22px;border-radius:999px;background:var(--slate-dark);color:var(--ivory-light);
-text-decoration:none;font-weight:500;font-size:15px}.btn:hover{background:var(--slate-medium)}
-.btn.ghost{background:transparent;color:var(--slate-dark);border:1px solid var(--cloud-medium)}
+border:1px solid transparent;text-decoration:none;font-weight:500;font-size:var(--fs-sm);white-space:nowrap;cursor:pointer;
+transition:background-color .2s ease,border-color .2s ease,color .2s ease,transform .15s cubic-bezier(.2,.7,.2,1)}
+.btn:hover{background:var(--slate-medium)}
+.btn:active{transform:scale(.98)}
+.btn.ghost{background:transparent;color:var(--slate-dark);border-color:var(--slate-light)}
 .btn.ghost:hover{border-color:var(--slate-dark);background:transparent}
-.hero{padding:120px 0 96px}
-.eyebrow{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--slate-light);margin:0 0 24px}
-h1{font:400 clamp(40px,6.4vw,76px)/1.04 var(--serif);letter-spacing:-.025em;margin:0 0 28px;max-width:19ch}
+.btn.quiet{background:transparent;color:var(--slate-dark);border-color:var(--slate-light)}
+.btn.quiet:hover{border-color:var(--slate-dark);background:transparent}
+header.scrolled .btn.quiet{background:var(--slate-dark);color:var(--ivory-light);border-color:transparent}
+header.scrolled .btn.quiet:hover{background:var(--slate-medium)}
+.hero{padding-block:120px 80px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero-routes{width:100%;height:auto;display:block}
+.eyebrow{font-size:var(--fs-label);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--slate-light);margin:0 0 24px}
+h1{font:400 var(--fs-display)/1.04 var(--serif);letter-spacing:-.025em;margin:0 0 28px;max-width:22ch;text-wrap:balance}
 h1 em{font-style:italic;color:var(--accent)}
-.lede{font-size:21px;line-height:1.55;color:var(--slate-light);max-width:56ch;margin:0 0 40px}
+.lede{font-size:var(--fs-lead);line-height:1.55;color:var(--slate-light);max-width:56ch;margin:0 0 40px}
 .ctas{display:flex;gap:12px;flex-wrap:wrap}
 .band{background:var(--slate-dark);color:var(--ivory-light)}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0}
-.stat{padding:44px 28px 44px 0;border-right:1px solid #2d2d2b}.stat:last-child{border-right:0}
-.stat b{display:block;font:400 44px/1 var(--serif);color:var(--clay);margin-bottom:12px;letter-spacing:-.02em}
-.stat span{color:var(--cloud-medium);font-size:15px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.stat{position:relative;padding:44px 32px}
+.stat:first-child{padding-left:0}
+.stat:last-child{padding-right:0}
+.stat .vr{position:absolute;left:0;top:44px;bottom:44px;width:1px;background:var(--slate-medium);transform-origin:top}
+.stat:first-child .vr{display:none}
+.stat b{display:block;font:400 var(--fs-stat)/1.05 var(--serif);color:var(--clay);margin-bottom:12px;letter-spacing:-.02em;text-wrap:balance}
+.stat .fact{font:400 22px/1.25 var(--serif);color:var(--ivory-light);margin:0 0 12px;letter-spacing:-.01em;text-wrap:balance}
+.stat .lbl{color:var(--cloud-medium);font-size:var(--fs-sm);display:block;text-wrap:balance}
 section{padding:104px 0}
-.kicker{display:flex;align-items:center;gap:14px;font-size:13px;font-weight:600;letter-spacing:.14em;
+section[id]{scroll-margin-top:84px}
+.kicker{display:flex;align-items:center;gap:14px;font-size:var(--fs-label);font-weight:600;letter-spacing:.14em;
 text-transform:uppercase;color:var(--slate-light);margin:0 0 20px}
-.kicker:before{content:"";width:28px;height:2px;background:var(--clay)}
-h2{font:400 clamp(30px,4vw,46px)/1.12 var(--serif);letter-spacing:-.02em;margin:0 0 20px;max-width:20ch}
-.intro{font-size:19px;color:var(--slate-light);max-width:60ch;margin:0 0 56px}
-.split{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start}
-.compare{background:var(--ivory-medium);border-radius:18px;padding:36px;display:grid;gap:22px}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding-bottom:18px;border-bottom:1px solid var(--ivory-dark)}
+.kicker:before{content:"";width:28px;height:2px;background:var(--accent);transform:scaleX(var(--kx,1));
+transform-origin:left;transition:transform .6s cubic-bezier(.65,0,.35,1)}
+h2{font:400 var(--fs-h2)/1.12 var(--serif);letter-spacing:-.02em;margin:0 0 20px;max-width:24ch;text-wrap:balance}
+h3{text-wrap:balance}
+.intro{font-size:var(--fs-lead);color:var(--slate-light);max-width:62ch;margin:0 0 56px}
+.tight{padding-top:0}
+.compare{background:var(--ivory-medium);border-radius:18px;padding:36px;display:grid;gap:18px}
+.row{display:grid;grid-template-columns:150px 1fr 1fr;gap:18px;padding-bottom:18px;border-bottom:1px solid var(--ivory-dark);align-items:start}
 .row:last-child{border-bottom:0;padding-bottom:0}
-.row small{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate-light);margin-bottom:6px}
-.row .us{font-weight:600}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.card{background:var(--ivory-medium);border-radius:18px;padding:34px 32px;display:flex;flex-direction:column;gap:10px}
-.card h3{font:500 25px/1.2 var(--serif);margin:0;letter-spacing:-.01em}
-.card .tag{font-size:13px;color:var(--slate-light);letter-spacing:.04em}
+.row.head{font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--slate-light);padding-bottom:14px}
+.row small{display:block;font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;color:var(--slate-light);font-weight:600}
+.row .us{font-weight:600;padding-left:14px;border-left:2px solid var(--accent)}
+.cards{display:grid;grid-template-columns:7fr 5fr;grid-template-rows:auto auto;gap:20px}
+.card{background:var(--ivory-medium);border-radius:18px;padding:36px 32px;display:flex;flex-direction:column;gap:10px;
+transition:transform .35s cubic-bezier(.2,.7,.2,1),background-color .35s ease}
+.card.lead{grid-row:1/3;justify-content:center;background:var(--ivory-dark)}
+.card h3{font:500 var(--fs-h3)/1.2 var(--serif);margin:0;letter-spacing:-.01em}
+.card.lead h3{font-size:28px}
+.card .tag{order:-1;font-size:var(--fs-label);color:var(--slate-light);letter-spacing:.08em;text-transform:uppercase;font-weight:600}
 .card p{margin:0;color:var(--slate-medium)}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:40px 36px}
-.step{border-top:1px solid var(--ivory-dark);padding-top:22px}
-.step .n{font:400 17px/1 var(--serif);color:var(--accent);display:block;margin-bottom:14px}
-.step h3{font:500 22px/1.25 var(--serif);margin:0 0 10px}.step p{margin:0;color:var(--slate-medium)}
+@media (hover:hover){.card:hover{transform:translateY(-3px);background:var(--ivory-dark)}}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:40px 36px}
+.step{position:relative;padding-top:22px}
+.step .rule{position:absolute;top:0;left:0;right:0;height:1px;background:var(--ivory-dark);transform-origin:left}
+.step .n{font:400 26px/1 var(--serif);color:var(--accent);display:block;margin-bottom:14px}
+.step h3{font:500 var(--fs-h3)/1.25 var(--serif);margin:0 0 10px}
+.step p{margin:0;color:var(--slate-medium)}
 .who{background:var(--ivory-medium)}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
-.chip{background:var(--ivory-light);border:1px solid var(--ivory-dark);border-radius:999px;padding:9px 16px;font-size:15px;color:var(--slate-medium)}
+.split{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start}
+#who .split{align-items:center}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 0;padding:0}
+.chip{background:var(--ivory-light);border-radius:6px;padding:8px 14px;font-size:var(--fs-sm);color:var(--slate-medium)}
 .contact-box{background:var(--slate-dark);color:var(--ivory-light);border-radius:22px;padding:64px 56px;display:grid;
 grid-template-columns:1.3fr 1fr;gap:40px;align-items:end}
-.contact-box h2{color:var(--ivory-light);margin:0 0 14px}.contact-box p{color:var(--cloud-medium);margin:0;max-width:46ch}
-.contact-box .btn{background:var(--ivory-light);color:var(--slate-dark)}.contact-box .btn:hover{background:var(--ivory-medium)}
-.contact-box .mail{display:block;margin-top:14px;color:var(--cloud-medium);font-size:15px}
+.contact-box h2{color:var(--ivory-light);margin:0 0 14px;max-width:16ch}
+.contact-box p{color:var(--cloud-medium);margin:0;max-width:46ch}
+.contact-box .btn{background:var(--ivory-light);color:var(--slate-dark)}
+.contact-box .btn:hover{background:var(--ivory-medium)}
+.contact-box .mail{display:inline-block;margin-top:14px;color:var(--cloud-medium);font-size:var(--fs-sm);text-decoration-color:var(--cloud-medium)}
+.contact-box .mail:hover{color:var(--ivory-light);text-decoration-color:var(--ivory-light)}
 footer{border-top:1px solid var(--ivory-dark)}
-.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:30px 0;color:var(--slate-light);font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding-block:30px;color:var(--slate-light);font-size:var(--fs-label)}
+.foot a{display:inline-block;padding:10px 0}
 .rise{opacity:0;transform:translateY(12px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
 .d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.28s}.d4{animation-delay:.42s}
 @keyframes rise{to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){.rise{animation:none;opacity:1;transform:none}html{scroll-behavior:auto}}
-@media (max-width:860px){nav{display:none}.split,.contact-box{grid-template-columns:1fr}.contact-box{padding:44px 28px}
-.stat{border-right:0;border-bottom:1px solid #2d2d2b;padding:30px 0}.stat:last-child{border-bottom:0}
-.hero{padding:80px 0 64px}section{padding:72px 0}.row{grid-template-columns:1fr}}</style>
+@media (prefers-reduced-motion:reduce){.rise{animation:none;opacity:1;transform:none}
+*,*:before,*:after{transition-duration:.01ms!important;transition-delay:0ms!important;animation-duration:.01ms!important;
+animation-iteration-count:1!important;scroll-behavior:auto!important}.card:hover{transform:none}}
+@media (max-width:1100px){.steps{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}.card.lead{grid-row:auto}}
+@media (max-width:860px){nav{display:none}
+.hero{padding-block:80px 56px}
+.hero-grid{grid-template-columns:1fr}.hero-routes{display:none}
+section{padding:72px 0}
+.split,.contact-box{grid-template-columns:1fr}
+.contact-box{padding:44px 28px}
+.intro{margin-bottom:40px}
+header .btn{padding:10px 16px;font-size:14px}
+.stat{padding:26px 0;border-bottom:1px solid var(--slate-medium)}
+.stat:last-child{border-bottom:0}
+.stat .vr{display:none}
+.foot a{padding:12px 0}}
+@media (max-width:640px){.steps{grid-template-columns:1fr}
+.row{grid-template-columns:1fr 1fr;gap:12px;font-size:15px}
+.row [role=rowheader]{grid-column:1/-1}
+.row [role=rowheader] small{margin:0}
+.compare{padding:26px 20px}}
+@media (max-width:380px){.word{font-size:18px}}</style>
 </head>
 <body>
 <header><div class="w bar">
 <a class="word" href="#top"><i aria-hidden="true"></i>Shaheen Funding</a>
 <nav aria-label="Main"><a href="#why">Why us</a><a href="#services">What we arrange</a><a href="#process">How we work</a><a href="#who">Who we work with</a></nav>
-<a class="btn" href="#contact">Talk to us</a>
+<a class="btn quiet" href="#contact">Talk to us</a>
 </div></header>
 
 <main id="top">
 <div class="w hero">
+<div class="hero-grid">
+<div>
 <p class="eyebrow rise d1">Funding advisory &middot; United Arab Emirates</p>
 <h1 class="rise d2">Funding for UAE businesses, from the lenders <em>that fit.</em></h1>
 <p class="lede rise d3">Shaheen Funding is an independent funding advisory firm. We work on your side, build your case, and take it to the banks and financiers most likely to back it, from working capital to large long-term facilities.</p>
 <div class="ctas rise d4"><a class="btn" href="#contact">Talk to us</a><a class="btn ghost" href="#services">What we arrange</a></div>
 </div>
+<svg class="hero-routes" viewBox="0 0 420 360" fill="none" aria-hidden="true">
+<path class="hl" pathLength="1" stroke="#b0aea5" stroke-width="1" d="M62 186Q196 44 366 40"/>
+<path class="hl" pathLength="1" stroke="#b0aea5" stroke-width="1" d="M62 186Q206 66 366 72"/>
+<path class="hl" pathLength="1" stroke="#b0aea5" stroke-width="1" d="M62 186Q216 96 366 104"/>
+<path class="hl" pathLength="1" stroke="#b0aea5" stroke-width="1" d="M62 186Q226 122 366 136"/>
+<path class="hl" pathLength="1" stroke="#b0aea5" stroke-width="1" d="M62 186Q230 152 366 168"/>
+<path class="hl" pathLength="1" stroke="#b0aea5" stroke-width="1" d="M62 186Q226 190 366 200"/>
+<path class="hl" pathLength="1" stroke="#b0aea5" stroke-width="1" d="M62 186Q216 224 366 232"/>
+<path class="hl" pathLength="1" stroke="#b0aea5" stroke-width="1" d="M62 186Q206 254 366 264"/>
+<path class="hl" pathLength="1" stroke="#b0aea5" stroke-width="1" d="M62 186Q196 284 366 296"/>
+<path class="hl" pathLength="1" stroke="#b0aea5" stroke-width="1" d="M62 186Q186 312 366 328"/>
+<path class="accent" pathLength="1" stroke="#c6613f" stroke-width="1.5" d="M62 186Q238 96 366 136"/>
+<g fill="#e8e6dc" stroke="#b0aea5">
+<circle cx="366" cy="40" r="4"/><circle cx="366" cy="72" r="4"/><circle cx="366" cy="104" r="4"/>
+<circle cx="366" cy="136" r="4"/><circle cx="366" cy="168" r="4"/><circle cx="366" cy="200" r="4"/>
+<circle cx="366" cy="232" r="4"/><circle cx="366" cy="264" r="4"/><circle cx="366" cy="296" r="4"/>
+<circle cx="366" cy="328" r="4"/></g>
+<circle cx="366" cy="136" r="6" stroke="#c6613f" stroke-width="1.5" fill="none"/>
+<circle cx="62" cy="186" r="7" fill="#d97757" stroke="#faf9f5" stroke-width="3"/>
+</svg>
+</div>
+</div>
 
 <div class="band"><div class="w stats">
-<div class="stat"><b>10+</b><span>UAE banks and specialist financiers we work with</span></div>
-<div class="stat"><b>Short to long term</b><span>From working capital to multi-year facilities</span></div>
-<div class="stat"><b>High-ticket</b><span>Facilities well beyond small-platform limits</span></div>
+<div class="stat"><i class="vr" aria-hidden="true"></i><b><span class="num">10</span>+</b><span class="lbl">UAE banks and specialist financiers</span></div>
+<div class="stat"><i class="vr" aria-hidden="true"></i><p class="fact">Short to long term</p><span class="lbl">Working capital to multi-year facilities</span></div>
+<div class="stat"><i class="vr" aria-hidden="true"></i><p class="fact">Small to high&#8209;ticket</p><span class="lbl">Beyond single-platform limits</span></div>
 </div></div>
 
-<section id="why"><div class="w split">
-<div>
+<section id="why"><div class="w">
 <p class="kicker">Why Shaheen Funding</p>
-<h2>Not one lender&rsquo;s appetite. The whole market&rsquo;s.</h2>
-<p class="intro">Single-platform lenders apply one credit policy and small caps, often around AED 1 million, and turn away most of the businesses that apply. We are not tied to any one lender. We match your business to the lender whose appetite fits it, so far more of the businesses we take on get funded, and at the size they actually need.</p>
-</div>
+<h2 data-reveal>Not one lender&rsquo;s appetite. The whole market&rsquo;s.</h2>
+<p class="intro" data-reveal>A single-platform lender has one credit policy and one ceiling, and the businesses that do not fit it get turned away. We are not tied to any one lender. We match your business to the banks and specialist financiers whose appetite fits it, then structure the facility at the size you need.</p>
 <div class="compare" role="table" aria-label="Shaheen Funding compared with a single-platform lender">
-<div class="row" role="row"><div role="cell"><small>Lenders</small>One platform, one policy</div><div class="us" role="cell"><small>Shaheen Funding</small>10+ banks and financiers</div></div>
-<div class="row" role="row"><div role="cell"><small>Ticket size</small>Small, capped facilities</div><div class="us" role="cell"><small>Shaheen Funding</small>Small to high-ticket</div></div>
-<div class="row" role="row"><div role="cell"><small>Term</small>Mostly short term</div><div class="us" role="cell"><small>Shaheen Funding</small>Short and long term</div></div>
-<div class="row" role="row"><div role="cell"><small>If it&rsquo;s a no</small>Declined, end of road</div><div class="us" role="cell"><small>Shaheen Funding</small>We take it to the next lender that fits</div></div>
+<div class="row head" role="row"><span></span><div role="columnheader">Single-platform lender</div><div class="us" role="columnheader">Shaheen Funding</div></div>
+<div class="row" role="row"><div role="rowheader"><small>Lenders</small></div><div role="cell">One platform, one policy</div><div class="us" role="cell">10+ banks and financiers</div></div>
+<div class="row" role="row"><div role="rowheader"><small>Ticket size</small></div><div role="cell">Small, capped facilities</div><div class="us" role="cell">Small to high&#8209;ticket</div></div>
+<div class="row" role="row"><div role="rowheader"><small>Term</small></div><div role="cell">Mostly short term</div><div class="us" role="cell">Short and long term</div></div>
+<div class="row" role="row"><div role="rowheader"><small>If it&rsquo;s a no</small></div><div role="cell">Declined, end of road</div><div class="us" role="cell">We take it to the next lender that fits</div></div>
 </div>
 </div></section>
 
-<section id="services" style="padding-top:0"><div class="w">
+<section id="services" class="tight"><div class="w">
 <p class="kicker">What we arrange</p>
-<h2>The right facility for the problem you actually have.</h2>
-<p class="intro">We start from your cash cycle, not from a product list, then structure the facility that fixes it.</p>
+<h2 data-reveal>The right facility for the problem you have.</h2>
+<p class="intro" data-reveal>We start from your cash cycle, then structure the facility that fixes it.</p>
 <div class="cards">
-<div class="card"><span class="tag">When the pain is paying out</span><h3>Working capital finance</h3><p>The lender pays your suppliers now and you repay on terms that match your collection cycle, so growth is not held back by cash tied up in stock and payroll.</p></div>
-<div class="card"><span class="tag">When the pain is waiting to get paid</span><h3>Invoice discounting</h3><p>Release cash against invoices you have already issued. Strong customers on slow terms become an asset you can fund against, not a gap you have to bridge.</p></div>
-<div class="card"><span class="tag">When the ambition is bigger</span><h3>Long-term and high-value facilities</h3><p>Larger, longer facilities through the banks, for expansion, capex and the moves a small platform cannot underwrite.</p></div>
+<div class="card lead" data-reveal><span class="tag">When the ambition is bigger</span><h3>Long-term and high&#8209;value facilities</h3><p>Larger, longer facilities through the banks, for expansion, capex and the moves a small platform cannot underwrite.</p></div>
+<div class="card" data-reveal><span class="tag">When cash goes out before it comes in</span><h3>Working capital and supplier finance</h3><p>The lender pays your suppliers now and you repay on terms that match your collection cycle, so growth is not held back by cash tied up in stock and payroll.</p></div>
+<div class="card" data-reveal><span class="tag">When the pain is waiting to get paid</span><h3>Invoice discounting</h3><p>Release cash against invoices you have already issued. Strong customers on slow terms become an asset you can fund against.</p></div>
 </div>
 </div></section>
 
-<section id="process" style="padding-top:0"><div class="w">
+<section id="process" class="tight"><div class="w">
 <p class="kicker">How we work</p>
-<h2>One process, handled end to end.</h2>
+<h2 data-reveal>One process, handled end to end.</h2>
 <div class="steps">
-<div class="step"><span class="n">01</span><h3>Assess</h3><p>We understand the business: what it does, how cash moves through it, and what it needs.</p></div>
-<div class="step"><span class="n">02</span><h3>Build the case</h3><p>We turn your numbers into a clear funding case that lenders can say yes to.</p></div>
-<div class="step"><span class="n">03</span><h3>Go to market</h3><p>We take it to the banks and financiers whose appetite fits, not just the first one.</p></div>
-<div class="step"><span class="n">04</span><h3>Through to decision</h3><p>We manage the questions and paperwork with you until the facility is in place.</p></div>
+<div class="step"><i class="rule" aria-hidden="true"></i><span class="n">01</span><h3>Assess</h3><p>We understand the business: what it does, how cash moves through it, and what it needs.</p></div>
+<div class="step"><i class="rule" aria-hidden="true"></i><span class="n">02</span><h3>Build the case</h3><p>We turn your numbers into a clear funding case that lenders can say yes to.</p></div>
+<div class="step"><i class="rule" aria-hidden="true"></i><span class="n">03</span><h3>Go to market</h3><p>We take it to every bank and financier whose appetite fits.</p></div>
+<div class="step"><i class="rule" aria-hidden="true"></i><span class="n">04</span><h3>Through to decision</h3><p>We manage the questions and paperwork with you until the facility is in place.</p></div>
 </div>
 </div></section>
 
 <section id="who" class="who"><div class="w split">
 <div>
 <p class="kicker">Who we work with</p>
-<h2>UAE businesses with real trading behind them.</h2>
-<p class="intro" style="margin-bottom:0">Established companies that are growing, carrying receivables, or planning their next step, and want a partner who knows which door to knock on.</p>
+<h2 data-reveal>UAE businesses with real trading behind them.</h2>
+<p class="intro" data-reveal style="margin-bottom:0">Established companies that are growing, carrying receivables, or planning their next step, and want a partner who knows which door to knock on.</p>
 </div>
-<div class="chips" aria-label="Typical sectors">
-<span class="chip">Trading and distribution</span><span class="chip">Food and FMCG</span><span class="chip">Facilities and services</span>
-<span class="chip">Contracting, HVAC and MEP</span><span class="chip">Healthcare and pharma</span><span class="chip">IT and technology</span>
-<span class="chip">Government and corporate suppliers</span>
-</div>
+<ul class="chips" aria-label="Typical sectors">
+<li class="chip" data-reveal>Trading and distribution</li>
+<li class="chip" data-reveal>Food and FMCG</li>
+<li class="chip" data-reveal>Facilities and services</li>
+<li class="chip" data-reveal>Contracting, HVAC and MEP</li>
+<li class="chip" data-reveal>Healthcare and pharma</li>
+<li class="chip" data-reveal>IT and technology</li>
+<li class="chip" data-reveal>Government and corporate suppliers</li>
+</ul>
 </div></section>
 
 <section id="contact"><div class="w">
 <div class="contact-box">
 <div><h2>Tell us what you need funded.</h2><p>Send a short note on your business and the facility you are looking for. We will tell you straight whether and where we can place it.</p></div>
-<div><a class="btn" href="mailto:asser@shaheenfunding.com">Email us</a><span class="mail">asser@shaheenfunding.com</span></div>
+<div><a class="btn" href="mailto:asser@shaheenfunding.com">Email us</a><a class="mail" href="mailto:asser@shaheenfunding.com">asser@shaheenfunding.com</a></div>
 </div>
 </div></section>
 </main>
 
 <footer><div class="w foot">
-<span>&copy; Shaheen Funding &middot; Independent funding advisers, United Arab Emirates</span>
+<span>&copy; 2026 Shaheen Funding &middot; Independent funding advisers, United Arab Emirates</span>
 <span><a href="mailto:asser@shaheenfunding.com">asser@shaheenfunding.com</a></span>
 </div></footer>
+
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js" integrity="sha384-XmJ9SoHtVOHoQUcKvFAzVXwdkKo1Ie3bhmSoIAkcdsHGaIrVJIkmozyq0FJeb/Ly" crossorigin="anonymous"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/ScrollTrigger.min.js" integrity="sha384-wl5TeDVvOWt30Pbf8aSo2ZrzsOjddu3avOBvHe+p+OhJt9gP6w9YXmDkN5DK2/dF" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js" integrity="sha384-jqpi9VmOdhyLoLURgjCn7EpnG9BbnHW57ibIZoeaIU+erWDH3k8fQQg0xH2ySjnw" crossorigin="anonymous"></script>
+<script>
+(function(){
+var d=document;
+function boot(){
+ if(!window.gsap||!window.ScrollTrigger)return;
+ gsap.registerPlugin(ScrollTrigger);
+ var header=d.querySelector('header');
+ var mm=gsap.matchMedia();
+ mm.add('(prefers-reduced-motion: no-preference)',function(){
+  if(window.Lenis){
+   var lenis=new Lenis({lerp:.1,smoothWheel:true,syncTouch:false});
+   lenis.on('scroll',ScrollTrigger.update);
+   gsap.ticker.add(function(t){lenis.raf(t*1000)});
+   gsap.ticker.lagSmoothing(0);
+   d.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+     var id=a.getAttribute('href');
+     if(id.length>1){var t=d.querySelector(id);
+      if(t){e.preventDefault();lenis.scrollTo(t,{offset:-68,duration:1.1,easing:function(t){return 1-Math.pow(1-t,4)}})}}});
+   });
+  }
+  ScrollTrigger.create({start:8,end:'max',onToggle:function(s){header.classList.toggle('scrolled',s.isActive)}});
+  d.querySelectorAll('section[id]').forEach(function(sec){
+   var link=d.querySelector('nav a[href="#'+sec.id+'"]');
+   if(!link)return;
+   ScrollTrigger.create({trigger:sec,start:'top center',end:'bottom center',
+    onToggle:function(s){link.classList.toggle('active',s.isActive)}});
+  });
+  var paths=d.querySelectorAll('.hero-routes .hl'),accent=d.querySelector('.hero-routes .accent');
+  if(paths.length){
+   gsap.set(paths,{strokeDasharray:1,strokeDashoffset:1});
+   if(accent)gsap.set(accent,{strokeDasharray:1,strokeDashoffset:1});
+   var tl=gsap.timeline({delay:.6});
+   tl.to(paths,{strokeDashoffset:0,duration:.9,stagger:.05,ease:'power2.out'});
+   if(accent)tl.to(accent,{strokeDashoffset:0,duration:.8,ease:'power2.inOut'},'-=.05');
+  }
+  var stats=[].slice.call(d.querySelectorAll('.stat'));
+  stats.forEach(function(st,i){
+   var vr=st.querySelector('.vr');
+   if(vr)gsap.set(vr,{scaleY:0});
+   gsap.set(st,{autoAlpha:0,y:16});
+   ScrollTrigger.create({trigger:st,start:'top 88%',once:true,onEnter:function(){
+    if(vr)gsap.to(vr,{scaleY:1,duration:.6,ease:'power2.out',delay:i*.12});
+    gsap.to(st,{autoAlpha:1,y:0,duration:.7,ease:'power3.out',delay:i*.12});
+   }});
+  });
+  var num=d.querySelector('.stat .num');
+  if(num)ScrollTrigger.create({trigger:'.stats',start:'top 88%',once:true,onEnter:function(){
+   var o={v:0};gsap.to(o,{v:10,duration:1.2,ease:'power2.out',
+    onUpdate:function(){num.textContent=Math.round(o.v)},onComplete:function(){num.textContent='10'}});
+  }});
+  d.querySelectorAll('.kicker').forEach(function(k){
+   k.style.setProperty('--kx','0');
+   ScrollTrigger.create({trigger:k,start:'top 88%',once:true,onEnter:function(){k.style.setProperty('--kx','1')}});
+  });
+  d.querySelectorAll('[data-reveal]').forEach(function(el){
+   var sibs=[].slice.call(el.parentElement.children).filter(function(x){return x.hasAttribute('data-reveal')});
+   var i=sibs.indexOf(el);
+   gsap.set(el,{autoAlpha:0,y:20});
+   ScrollTrigger.create({trigger:el,start:'top 88%',once:true,onEnter:function(){
+    gsap.to(el,{autoAlpha:1,y:0,duration:.8,ease:'power3.out',delay:.1+i*.08})}});
+  });
+  d.querySelectorAll('.step').forEach(function(st,i){
+   var rule=st.querySelector('.rule');if(rule)gsap.set(rule,{scaleX:0});
+   var kids=st.querySelectorAll('.n,h3,p');gsap.set(kids,{autoAlpha:0,y:12});
+   ScrollTrigger.create({trigger:st,start:'top 88%',once:true,onEnter:function(){
+    var dl=(i%4)*.18;
+    if(rule)gsap.to(rule,{scaleX:1,duration:.7,ease:'power2.out',delay:dl});
+    gsap.to(kids,{autoAlpha:1,y:0,duration:.6,stagger:.05,delay:dl+.15,ease:'power3.out'});
+   }});
+  });
+  var box=d.querySelector('.contact-box');
+  if(box){
+   var inner=box.querySelectorAll(':scope>div');
+   gsap.set(box,{clipPath:'inset(6% 4% round 22px)',scale:.985});
+   gsap.set(inner,{autoAlpha:0,y:16});
+   ScrollTrigger.create({trigger:box,start:'top 85%',once:true,onEnter:function(){
+    gsap.to(box,{clipPath:'inset(0% 0% round 22px)',scale:1,duration:1,ease:'power3.inOut'});
+    gsap.to(inner,{autoAlpha:1,y:0,duration:.7,stagger:.1,delay:.2,ease:'power3.out'});
+   }});
+  }
+  return function(){header.classList.remove('scrolled')};
+ });
+}
+if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',boot);else boot();
+})();
+</script>
 </body>
 </html>
