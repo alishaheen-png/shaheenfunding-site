@@ -99,6 +99,7 @@ h3{text-wrap:balance}
 .row.head{font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--slate-light);padding-bottom:14px}
 .row small{display:block;font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;color:var(--slate-light);font-weight:600}
 .row .us{font-weight:600;padding-left:14px;border-left:2px solid var(--accent)}
+.row.head .us{color:var(--accent)}
 .cards{display:grid;grid-template-columns:7fr 5fr;grid-template-rows:auto auto;gap:20px}
 .card{background:var(--ivory-medium);border-radius:18px;padding:36px 32px;display:flex;flex-direction:column;gap:10px;
 transition:transform .35s cubic-bezier(.2,.7,.2,1),background-color .35s ease}
@@ -153,6 +154,8 @@ header .btn{padding:10px 16px;font-size:14px}
 .row{grid-template-columns:1fr 1fr;gap:12px;font-size:15px}
 .row [role=rowheader]{grid-column:1/-1}
 .row [role=rowheader] small{margin:0}
+.row.head>span{display:none}
+.row.head{position:sticky;top:69px;z-index:1;background:var(--ivory-medium);padding-top:8px}
 .compare{padding:26px 20px}}
 @media (max-width:380px){.word{font-size:18px}}</style>
 </head>
