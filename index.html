@@ -94,12 +94,14 @@ h3{text-wrap:balance}
 .intro{font-size:var(--fs-lead);color:var(--slate-light);max-width:62ch;margin:0 0 56px}
 .tight{padding-top:0}
 .compare{background:var(--ivory-medium);border-radius:18px;padding:36px;display:grid;gap:18px}
-.row{display:grid;grid-template-columns:150px 1fr 1fr;gap:18px;padding-bottom:18px;border-bottom:1px solid var(--ivory-dark);align-items:start}
+.row{display:grid;grid-template-columns:minmax(200px,1.15fr) 1fr 1fr;gap:28px;padding-bottom:20px;border-bottom:1px solid var(--ivory-dark);align-items:baseline}
+.row>[role=cell]:not(.us){color:var(--slate-light)}
 .row:last-child{border-bottom:0;padding-bottom:0}
-.row.head{font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--slate-light);padding-bottom:14px}
-.row small{display:block;font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;color:var(--slate-light);font-weight:600}
-.row .us{font-weight:600;padding-left:14px;border-left:2px solid var(--accent)}
-.row.head .us{color:var(--accent)}
+.row.head{font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--slate-light);padding-bottom:14px;border-bottom:1px solid var(--cloud-medium)}
+.row .q{display:block;font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.35;color:var(--slate-dark);font-weight:400}
+.row .us{font-weight:600;padding-left:14px;border-left:2px solid var(--accent);text-wrap:balance}
+.row.head .us{color:var(--slate-dark);display:flex;align-items:center;gap:8px}
+.row.head .us::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--clay);flex:none}
 .cards{display:grid;grid-template-columns:7fr 5fr;grid-template-rows:auto auto;gap:20px}
 .card{background:var(--ivory-medium);border-radius:18px;padding:36px 32px;display:flex;flex-direction:column;gap:10px;
 transition:transform .35s cubic-bezier(.2,.7,.2,1),background-color .35s ease}
@@ -151,9 +153,9 @@ header .btn{padding:10px 16px;font-size:14px}
 .stat .vr{display:none}
 .foot a{padding:12px 0}}
 @media (max-width:640px){.steps{grid-template-columns:1fr}
-.row{grid-template-columns:1fr 1fr;gap:12px;font-size:15px}
+.row{grid-template-columns:1fr 1fr;gap:10px 16px;font-size:15px;align-items:start}
+.row .q{font-size:17px;margin-bottom:2px}
 .row [role=rowheader]{grid-column:1/-1}
-.row [role=rowheader] small{margin:0}
 .row.head>span{display:none}
 .row.head{position:sticky;top:69px;z-index:1;background:var(--ivory-medium);padding-top:8px}
 .compare{padding:26px 20px}}
@@ -209,11 +211,11 @@ header .btn{padding:10px 16px;font-size:14px}
 <h2 data-reveal>Not one lender&rsquo;s appetite. The whole market&rsquo;s.</h2>
 <p class="intro" data-reveal>A single-platform lender has one credit policy and one ceiling, and the businesses that do not fit it get turned away. We are not tied to any one lender. We match your business to the banks and specialist financiers whose appetite fits it, then structure the facility at the size you need.</p>
 <div class="compare" role="table" aria-label="Shaheen Funding compared with a single-platform lender">
-<div class="row head" role="row"><span></span><div role="columnheader">Single-platform lender</div><div class="us" role="columnheader">Shaheen Funding</div></div>
-<div class="row" role="row"><div role="rowheader"><small>Lenders</small></div><div role="cell">One platform, one policy</div><div class="us" role="cell">10+ banks and financiers</div></div>
-<div class="row" role="row"><div role="rowheader"><small>Ticket size</small></div><div role="cell">Small, capped facilities</div><div class="us" role="cell">Small to high&#8209;ticket</div></div>
-<div class="row" role="row"><div role="rowheader"><small>Term</small></div><div role="cell">Mostly short term</div><div class="us" role="cell">Short and long term</div></div>
-<div class="row" role="row"><div role="rowheader"><small>If it&rsquo;s a no</small></div><div role="cell">Declined, end of road</div><div class="us" role="cell">We take it to the next lender that fits</div></div>
+<div class="row head" role="row"><span></span><div role="columnheader">A single lender</div><div class="us" role="columnheader">Shaheen Funding</div></div>
+<div class="row" role="row"><div role="rowheader"><span class="q">How many lenders see your file?</span></div><div role="cell">One platform, one policy</div><div class="us" role="cell">10+ banks and financiers</div></div>
+<div class="row" role="row"><div role="rowheader"><span class="q">How big can the facility be?</span></div><div role="cell">Small, capped facilities</div><div class="us" role="cell">Small to high&#8209;ticket</div></div>
+<div class="row" role="row"><div role="rowheader"><span class="q">How long can it run?</span></div><div role="cell">Mostly short term</div><div class="us" role="cell">Short and long term</div></div>
+<div class="row" role="row"><div role="rowheader"><span class="q">What happens after a no?</span></div><div role="cell">Declined, end of road</div><div class="us" role="cell">We take it to the next lender that fits</div></div>
 </div>
 </div></section>
 
