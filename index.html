@@ -21,10 +21,8 @@
 "url":"https://shaheenfunding.com/","email":"asser@shaheenfunding.com","areaServed":"AE",
 "description":"Independent funding advisers for UAE businesses, connected to 10+ UAE banks and specialist financiers, from working capital to large long-term facilities."}
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap"></noscript>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-<link rel="preconnect" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.css">
 <style>:root{--ivory-light:#faf9f5;--ivory-medium:#f0eee6;--ivory-dark:#e8e6dc;--slate-dark:#141413;
 --slate-medium:#3d3d3a;--slate-light:#5e5d59;--cloud-medium:#b0aea5;--clay:#d97757;--accent:#c6613f;
 --serif:"Source Serif 4",Georgia,serif;--sans:"Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -133,10 +131,8 @@ grid-template-columns:1.3fr 1fr;gap:40px;align-items:end}
 footer{border-top:1px solid var(--ivory-dark)}
 .foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding-block:30px;color:var(--slate-light);font-size:var(--fs-label)}
 .foot a{display:inline-block;padding:10px 0}
-.rise{opacity:0;transform:translateY(12px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
-.d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.28s}.d4{animation-delay:.42s}
-@keyframes rise{to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){.rise{animation:none;opacity:1;transform:none}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+@media (prefers-reduced-motion:reduce){
 *,*:before,*:after{transition-duration:.01ms!important;transition-delay:0ms!important;animation-duration:.01ms!important;
 animation-iteration-count:1!important;scroll-behavior:auto!important}.card:hover{transform:none}}
 @media (max-width:1100px){.steps{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}.card.lead{grid-row:auto}}
@@ -273,7 +269,6 @@ header .btn{padding:10px 16px;font-size:14px}
 
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js" integrity="sha384-XmJ9SoHtVOHoQUcKvFAzVXwdkKo1Ie3bhmSoIAkcdsHGaIrVJIkmozyq0FJeb/Ly" crossorigin="anonymous"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/ScrollTrigger.min.js" integrity="sha384-wl5TeDVvOWt30Pbf8aSo2ZrzsOjddu3avOBvHe+p+OhJt9gP6w9YXmDkN5DK2/dF" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js" integrity="sha384-jqpi9VmOdhyLoLURgjCn7EpnG9BbnHW57ibIZoeaIU+erWDH3k8fQQg0xH2ySjnw" crossorigin="anonymous"></script>
 <script>
 (function(){
 var d=document;
@@ -283,18 +278,6 @@ function boot(){
  var header=d.querySelector('header');
  var mm=gsap.matchMedia();
  mm.add('(prefers-reduced-motion: no-preference)',function(){
-  if(window.Lenis){
-   var lenis=new Lenis({lerp:.1,smoothWheel:true,syncTouch:false});
-   lenis.on('scroll',ScrollTrigger.update);
-   gsap.ticker.add(function(t){lenis.raf(t*1000)});
-   gsap.ticker.lagSmoothing(0);
-   d.querySelectorAll('a[href^="#"]').forEach(function(a){
-    a.addEventListener('click',function(e){
-     var id=a.getAttribute('href');
-     if(id.length>1){var t=d.querySelector(id);
-      if(t){e.preventDefault();lenis.scrollTo(t,{offset:-68,duration:1.1,easing:function(t){return 1-Math.pow(1-t,4)}})}}});
-   });
-  }
   ScrollTrigger.create({start:8,end:'max',onToggle:function(s){header.classList.toggle('scrolled',s.isActive)}});
   d.querySelectorAll('section[id]').forEach(function(sec){
    var link=d.querySelector('nav a[href="#'+sec.id+'"]');
