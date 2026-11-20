@@ -21,14 +21,27 @@ a.btn{display:inline-block;padding:13px 22px;border-radius:999px;background:var(
 text-decoration:none;font-weight:500;font-size:15px;margin-right:12px}
 a.btn:hover{background:var(--slate-medium)}
 a{color:var(--slate-dark);text-decoration-color:var(--slate-light)}
+[hidden]{display:none!important}.git-alt{font-size:14px;margin:18px 0 0}
 </style>
 </head>
 <body>
 <div class="box">
 <p class="kicker">Error 404</p>
 <h1>That page doesn&rsquo;t exist.</h1>
-<p>The page you&rsquo;re looking for has moved or never existed. Head back to the site, or email us directly at <a href="mailto:asser@shaheenfunding.com">asser@shaheenfunding.com</a>.</p>
-<a class="btn" href="https://shaheenfunding.com/">Back to shaheenfunding.com</a>
+<p>The page you&rsquo;re looking for has moved or never existed. Head back to the site, or get in touch.</p>
+<a class="btn" href="https://shaheenfunding.com/">Back to shaheenfunding.com</a><a class="btn git" href="https://shaheenfunding.com/#contact" aria-label="Get in touch by email">Get in touch</a><p class="git-alt" aria-live="polite" hidden>No mail app opened? Open the draft in <a class="git-gm" href="https://shaheenfunding.com/#contact">Gmail</a> · <a class="git-ol" href="https://shaheenfunding.com/#contact">Outlook</a></p>
 </div>
+<script>
+(function(){var u='ali',d='shaheenfunding.com',
+s=encodeURIComponent('Funding enquiry - <company name>'),
+b=encodeURIComponent('Hi Ali,\r\n\r\nCompany: \r\nWhat we need funding for: \r\nRough amount (AED): \r\nBest number to reach me: \r\n'),
+q='?subject='+s+'&body='+b, h='mailto:'+u+'@'+d+q, t=encodeURIComponent(u+'@'+d),
+gm='https://mail.google.com/mail/?view=cm&to='+t+'&su='+s+'&body='+b,
+ol='https://outlook.office.com/mail/deeplink/compose?to='+t+'&subject='+s+'&body='+b;
+document.querySelectorAll('a.git').forEach(function(a){a.href=h;a.hidden=false;
+ a.addEventListener('click',function(){var p=document.querySelector('.git-alt');if(p){p.hidden=false;}});});
+document.querySelectorAll('a.git-gm').forEach(function(a){a.href=gm;});
+document.querySelectorAll('a.git-ol').forEach(function(a){a.href=ol;});})();
+</script>
 </body>
 </html>
