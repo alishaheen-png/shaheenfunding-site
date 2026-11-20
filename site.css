@@ -1,0 +1,285 @@
+/* shaheenfunding.com — "The Gap Rule". One ruler (payroll due at 30, clients pay at 120) runs through the page.
+   Every colour, size and duration is a token below; nothing else holds a raw value. */
+
+@font-face{font-family:"Big Shoulders Display";src:url(/fonts/big-shoulders-900.woff2) format("woff2");font-weight:900;font-display:swap}
+@font-face{font-family:"Big Shoulders Display";src:url(/fonts/big-shoulders-300.woff2) format("woff2");font-weight:300;font-display:swap}
+@font-face{font-family:"Readex Pro";src:url(/fonts/readex-pro.woff2) format("woff2");font-weight:160 700;font-display:swap}
+@font-face{font-family:"Nunito";src:url(/fonts/nunito-900-mark.woff2) format("woff2");font-weight:900;font-display:swap}
+/* Metric-matched fallbacks so the web fonts swap in without moving the layout. */
+@font-face{font-family:"Display fb";src:local("Arial Bold"),local("Arial-BoldMT"),local("Arial");font-weight:900;size-adjust:82.8%;ascent-override:118.8%;descent-override:25.7%;line-gap-override:0%}
+@font-face{font-family:"Display fb";src:local("Arial"),local("ArialMT");font-weight:300;size-adjust:61.2%;ascent-override:160.8%;descent-override:34.8%;line-gap-override:0%}
+@font-face{font-family:"Body fb";src:local("Arial"),local("ArialMT");size-adjust:107.6%;ascent-override:92.9%;descent-override:23.2%;line-gap-override:0%}
+
+:root{
+  --paper:#EEF0EC; --ink:#0A0C0B; --night:#0F1E1C; --night-lift:#243532; --on-night:#FFFFFF;
+  --clay:#D97757; --clay-press:#CC6947; --copper-hi:#E2A27A; --copper-lo:#8A4B2C; --sheet:#FFFFFF;
+  --hair:rgb(10 12 11/.18); --hair-night:rgb(255 255 255/.28);
+  --f-display:"Big Shoulders Display","Display fb","Arial Narrow",Impact,sans-serif;
+  --f-body:"Readex Pro","Body fb",Arial,sans-serif;
+  --f-mark:"Nunito","Arial Black",sans-serif;
+  --t-numeral:clamp(6rem,min(19vw,30svh),20rem);
+  --t-h1:clamp(2.6rem,5.5vw,6rem);
+  --t-h2:clamp(2.1rem,4.4vw,4.5rem);
+  --t-h3:clamp(1.5rem,2.1vw,2.1rem);
+  --t-fee:clamp(2.2rem,6.4vw,7rem);
+  --t-contact:clamp(3rem,9vw,10rem);
+  --t-body:1.125rem; --t-caption:.9375rem;
+  --s-1:8px; --s-2:16px; --s-3:24px; --s-4:40px; --s-5:64px;
+  --s-6:clamp(72px,9vw,128px); --s-7:clamp(96px,12vw,168px); --s-8:clamp(104px,14vw,200px);
+  --pad:clamp(16px,3.4vw,48px); --nav-h:56px;
+  --ease-out:cubic-bezier(.2,.7,.1,1); --ease-inout:cubic-bezier(.65,0,.35,1);
+  --d-fast:200ms; --d-mid:300ms; --d-draw:500ms;
+  --copper:linear-gradient(180deg,var(--copper-hi) 0%,var(--clay) 38%,var(--copper-lo) 100%);
+  --hatch:repeating-linear-gradient(135deg,currentColor 0 1px,transparent 1px 6px);
+  --shadow-sheet:inset 0 1px 0 rgb(255 255 255/.6),0 18px 24px -12px rgb(10 12 11/.35),0 2px 6px rgb(10 12 11/.12);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{overflow-x:clip}
+html{scroll-padding-top:calc(var(--nav-h) + 16px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 var(--t-body)/1.5 var(--f-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3,p,ol,ul,table{margin:0;padding:0}
+h1,h2,h3{font-family:var(--f-display);font-weight:900;text-wrap:balance}
+h1{font-size:var(--t-h1);line-height:1.02}
+h2{font-size:var(--t-h2);line-height:1.02}
+h3{font-size:var(--t-h3);line-height:1.05}
+p{max-inline-size:62ch;text-wrap:pretty}
+a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid currentColor;outline-offset:2px}
+::selection{background:var(--clay);color:var(--ink)}
+table{border-collapse:collapse;inline-size:100%;text-align:start}
+th{text-align:start;font-weight:600}
+.wrap{max-inline-size:1440px;margin-inline:auto;padding-inline:var(--pad)}
+.skip{position:absolute;inset-inline-start:var(--pad);top:-80px;z-index:20;background:var(--ink);color:var(--paper);padding:12px 16px}
+.skip:focus{top:8px}
+.nb{white-space:nowrap}
+
+/* Wordmark: locked. Clay dot + Nunito 900. */
+.mark{display:inline-flex;align-items:center;gap:.42em;min-block-size:44px;font:900 1.25rem/1 var(--f-mark);letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
+.dot{inline-size:.48em;block-size:.48em;border-radius:50%;background:var(--clay)}
+
+/* The one button. Flat clay plate, ink label, ink edge. */
+.btn{display:inline-flex;align-items:center;gap:12px;block-size:56px;padding-inline:28px;background:var(--clay);color:var(--ink);
+  font:600 1.0625rem/1 var(--f-body);text-decoration:none;white-space:nowrap;border-radius:2px;
+  box-shadow:inset 0 0 0 1px var(--ink),inset 0 2px 0 rgb(255 255 255/.3);transition:background var(--d-fast) var(--ease-out)}
+.btn:hover{background:var(--clay-press)}
+.btn:active{box-shadow:inset 0 0 0 1px var(--ink),inset 0 3px 0 rgb(10 12 11/.3);translate:0 1px}
+.btn-nav{block-size:44px;padding-inline:18px;font-size:var(--t-caption)}
+.btn-xl{block-size:72px;padding-inline:40px;font-size:1.25rem;gap:16px}
+.env{flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linejoin:round;overflow:visible}
+.flap{d:path("M.75 .75 L10 .75 L19.25 .75");transition:d var(--d-mid) var(--ease-inout)}
+.btn:hover .flap,.btn:focus-visible .flap{d:path("M.75 .75 L10 7.5 L19.25 .75")}
+.pdf{display:inline-flex;align-items:center;min-block-size:44px;font-weight:600;font-size:var(--t-caption)}
+.ctas{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-1) var(--s-3)}
+
+/* Nav: frosted paper, so the page slides under it. */
+.nav{position:sticky;top:0;z-index:10;background:rgb(238 240 236/.72);-webkit-backdrop-filter:blur(18px) saturate(1.6);backdrop-filter:blur(18px) saturate(1.6);border-block-end:1px solid var(--ink)}
+.nav .wrap{display:flex;align-items:center;gap:var(--s-4);block-size:var(--nav-h)}
+.nav nav{display:none;gap:var(--s-4);margin-inline-start:auto;font-size:var(--t-caption)}
+.nav nav a{display:inline-flex;align-items:center;min-block-size:44px;text-decoration:none}
+.nav nav a:hover{text-decoration:underline}
+.nav .btn{margin-inline-start:auto}
+
+/* The ruler. 0 to 120 days; the gap between 30 and 120 is hatched. */
+.ruler{--hatch-h:12px;position:relative;display:block;block-size:calc(var(--hatch-h) + 40px)}
+.ruler::before{content:"";position:absolute;inset-inline:0;top:var(--hatch-h);border-block-start:1px solid currentColor}
+.ruler .hatch{position:absolute;inset-inline:25% 0;top:0;block-size:var(--hatch-h);background:var(--hatch)}
+.tick{position:absolute;top:var(--hatch-h);inline-size:1px;block-size:8px;background:currentColor}
+.t0{inset-inline-start:0}.t30{inset-inline-start:25%;block-size:16px}.t60{inset-inline-start:50%}.t90{inset-inline-start:75%}.t120{inset-inline-end:0;block-size:16px}
+.ruler b{position:absolute;top:calc(var(--hatch-h) + 14px);translate:-50%;font:600 var(--t-caption)/1 var(--f-body);font-variant-numeric:tabular-nums lining-nums}
+.n30{inset-inline-start:25%}.n60{inset-inline-start:50%}.n90{inset-inline-start:75%}
+.ruler .n120{inset-inline:auto 0;translate:0}
+
+/* Hero: the visitor's month. 30 stands where payroll falls due, 120 where the client pays. */
+.hero .wrap{display:flex;flex-direction:column;justify-content:space-between;gap:var(--s-5);min-block-size:calc(100svh - var(--nav-h));padding-block:var(--s-4) var(--s-5)}
+.gap{display:grid;grid-template-columns:25% 1fr}
+.due,.paid{display:contents}
+.num{font:900 var(--t-numeral)/.84 var(--f-display);font-variant-numeric:lining-nums;justify-self:end;margin-block-end:.02em}
+.due .num{grid-area:1/1}.paid .num{grid-area:1/2}
+.gap .ruler{grid-area:2/1/3/-1;--hatch-h:clamp(14px,2vw,28px)}
+.cap{font-size:var(--t-caption);line-height:1.4;font-weight:600;max-inline-size:26ch}
+.due .cap{grid-area:3/1;padding-inline-end:var(--s-2)}
+.paid .cap{grid-area:3/2;justify-self:end;text-align:end}
+.pitch{display:grid;gap:var(--s-3)}
+.lede{font-size:var(--t-body)}
+.pitch-side{display:grid;gap:var(--s-3)}
+
+/* Night chapters: raking light and a little grain. */
+.night{position:relative;isolation:isolate;color:var(--on-night);background:radial-gradient(120vw 80vh at 10% -10%,var(--night-lift),var(--night) 60%) var(--night)}
+.night::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.09;mix-blend-mode:overlay;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* I. Who we work with / what we arrange: one ledger. */
+.who .wrap{padding-block:var(--s-7) var(--s-6)}
+.who-head{display:grid;gap:var(--s-3);max-inline-size:1000px}
+.what-head{display:grid;gap:var(--s-3);margin-block-start:var(--s-7);padding-block:var(--s-4) var(--s-5);border-block-start:1px solid var(--on-night)}
+.what-head h2{font-size:var(--t-h3);line-height:1.05}
+.ledger thead th{font-size:var(--t-caption);padding-block:var(--s-2);border-block-end:1px solid var(--on-night)}
+.ledger tbody tr{border-block-end:1px solid var(--hair-night)}
+.ledger tbody th,.ledger td{vertical-align:top;padding-block:var(--s-4)}
+.ledger tbody th{inline-size:44%;padding-inline-end:var(--s-4)}
+.seg-name{display:block;font:900 clamp(1.7rem,2.8vw,2.9rem)/1.02 var(--f-display)}
+.ruler.mini{max-inline-size:420px;margin-block-start:var(--s-3);block-size:calc(var(--hatch-h) + 16px)}
+.ledger td strong{display:block;font-weight:600;font-size:1.375rem;line-height:1.25;margin-block-end:var(--s-1)}
+.ledger td p{max-inline-size:54ch}
+
+/* II. How we work: the first 30 days at true scale. The work ends before the 30 mark. */
+.how .wrap{padding-block:var(--s-6) var(--s-7)}
+.how h2{max-inline-size:1000px}
+.axis{position:relative;block-size:92px;margin-block:var(--s-5) var(--s-4)}
+.axis::before{content:"";position:absolute;inset-inline:0 8%;top:46px;border-block-start:1px solid var(--ink)}
+.axis::after{content:"";position:absolute;inset-inline:92% 0;top:46px;border-block-start:1px dashed var(--ink)}
+.segs{position:absolute;inset-inline:0 8%;top:36px;block-size:10px}
+.seg{position:absolute;top:0;block-size:10px;background:var(--copper);box-shadow:inset 0 1px 0 rgb(255 255 255/.55),inset 0 -2px 3px rgb(10 12 11/.35),0 2px 4px rgb(10 12 11/.18)}
+.s1{inset-inline-start:0;inline-size:calc(3.333% - 2px)}
+.s2{inset-inline-start:3.333%;inline-size:calc(6.667% - 2px)}
+.s3{inset-inline-start:10%;inline-size:calc(13.333% - 2px)}
+.s4{inset-inline-start:50%;inline-size:43.333%}
+.step-label{position:absolute;font:600 var(--t-caption)/1 var(--f-body);white-space:nowrap;display:none}
+.l1{top:8px;inset-inline-start:0}.l3{top:8px;inset-inline-start:9.2%}
+.l2{top:62px;inset-inline-start:3.067%}.l4{top:62px;inset-inline-start:46%}
+.axis .t30{inset-inline-start:92%;top:30px;block-size:32px}
+.axis b{position:absolute;top:68px;font:600 var(--t-caption)/1 var(--f-body);font-variant-numeric:tabular-nums lining-nums}
+.axis .n30{inset-inline-start:92%;translate:-50%}
+.axis .n120{inset-inline-end:0}
+.steps{list-style:none;display:grid}
+.steps>li{display:grid;grid-template-columns:minmax(88px,22%) 1fr;column-gap:var(--s-2);row-gap:var(--s-1);padding-block:var(--s-3);border-block-start:1px solid var(--ink)}
+.steps>li>*{grid-column:2}
+.steps .when{grid-column:1;grid-row:1/span 3;font-weight:600;font-size:var(--t-caption);padding-block-start:.35em}
+.docs{list-style:none;display:flex;gap:var(--s-3) var(--s-2);margin-block-start:var(--s-3);font-size:.8125rem;line-height:1.3;font-weight:600}
+.docs{grid-column:1/-1!important}
+.docs li{flex:1 1 0;min-inline-size:0;max-inline-size:112px}
+.docs .nda{box-sizing:content-box;padding-inline-end:var(--s-2);border-inline-end:1px solid var(--ink)}
+.sheet{display:block;aspect-ratio:1/1.414;margin-block-end:var(--s-2);padding:22% 14% 40%;
+  background:repeating-linear-gradient(180deg,rgb(10 12 11/.3) 0 1px,transparent 1px 16.6%) content-box,var(--sheet);box-shadow:var(--shadow-sheet)}
+
+/* III. Why us: the comparison. On wide screens our column sits on a pane of frosted glass
+   with the gap (hatch) and the copper bar behind it. */
+.why .wrap{padding-block:var(--s-6) var(--s-8)}
+.why-head{display:grid;gap:var(--s-3);margin-block-end:var(--s-6)}
+.compare-stage{position:relative;isolation:isolate}
+.glow,.pane{display:none}
+.compare thead{position:absolute;inline-size:1px;block-size:1px;overflow:hidden;clip-path:inset(50%)}
+.compare tr{display:block;padding-block:var(--s-3);border-block-start:1px solid var(--ink)}
+.compare tbody th{display:block;font:900 var(--t-h3)/1.05 var(--f-display);margin-block-end:var(--s-2)}
+.compare td{display:block;padding-block:var(--s-1)}
+.compare td::before{content:attr(data-l);display:block;font-size:.8125rem;font-weight:600;margin-block-end:2px}
+.compare td:last-child{margin-block-start:var(--s-1);padding:var(--s-2);background:var(--sheet);box-shadow:var(--shadow-sheet);font-weight:600}
+
+/* IV. How we're paid: the gap closes in copper. */
+.fee .wrap{display:flex;flex-direction:column;justify-content:center;gap:var(--s-6);min-block-size:70svh;padding-block:var(--s-6)}
+.fee-line{font:300 var(--t-fee)/1.02 var(--f-display);max-inline-size:1280px;text-wrap:balance}
+.fee-line h2,.fee-line p{display:inline;font-size:inherit;line-height:inherit;max-inline-size:none}
+.fee-line p{font-weight:300}
+.closed .bar{position:absolute;inset-inline:25% 0;top:2px;block-size:10px;overflow:hidden;background:linear-gradient(180deg,var(--copper-hi),var(--clay) 45%,var(--copper-lo));
+  box-shadow:inset 0 1px 0 rgb(255 255 255/.55),inset 0 -2px 3px rgb(10 12 11/.35)}
+.closed .bar::after{content:"";position:absolute;inset-block:0;inset-inline-start:0;inline-size:12%;background:linear-gradient(100deg,transparent,rgb(255 255 255/.6),transparent);translate:520% 0}
+
+/* V. Contact. */
+.contact .wrap{display:flex;flex-direction:column;justify-content:center;gap:var(--s-5);min-block-size:calc(100svh - var(--nav-h));padding-block:var(--s-7) var(--s-6)}
+.contact h2{font-size:var(--t-contact);line-height:.94;max-inline-size:14ch}
+.contact-side{display:grid;gap:var(--s-2);justify-items:start}
+.contact-side .ctas{margin-block-start:var(--s-2)}
+.git-alt,.opens{font-size:var(--t-caption)}
+
+.foot{border-block-start:1px solid var(--ink);font-size:var(--t-caption)}
+.foot .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-1) var(--s-4);padding-block:var(--s-3)}
+.foot p{max-inline-size:none}
+.foot p:last-child{margin-inline-start:auto}
+
+/* 404 */
+.nf .wrap{display:flex;flex-direction:column;justify-content:center;gap:var(--s-4);min-block-size:calc(100svh - var(--nav-h));padding-block:var(--s-5)}
+.nf .num{justify-self:auto;margin:0}
+
+@media (max-width:480px){
+  :root{--t-body:1.0625rem;--t-numeral:27vw}
+  .mark{font-size:1.125rem}
+  .due .cap{grid-area:3/1/4/-1;margin-block-start:var(--s-1)}
+  .paid .cap{grid-area:4/1/5/-1}
+  .gap .ruler b{display:none}
+  .gap .ruler{block-size:calc(var(--hatch-h) + 20px)}
+  .btn-xl{block-size:64px;padding-inline:28px}
+  .docs{font-size:0;gap:var(--s-1)}
+  .docs .nda{padding-inline-end:var(--s-1)}
+  .sheet{margin-block-end:0}
+  .foot p:last-child{margin-inline-start:0}
+}
+
+@media (max-width:767px){
+  .ledger thead{position:absolute;inline-size:1px;block-size:1px;overflow:hidden;clip-path:inset(50%)}
+  .ledger tr,.ledger tbody th,.ledger td{display:block;inline-size:auto}
+  .ledger tbody th{padding-block-end:var(--s-3)}
+  .ledger td{padding-block-start:0}
+  .axis .n120,.axis::after{display:none}
+}
+
+@media (min-width:768px){
+  .what-head{grid-template-columns:5fr 1fr 5fr}
+  .what-head p{grid-column:3;align-self:end}
+  .docs{font-size:var(--t-caption)}
+
+  .why-head{grid-template-columns:7fr 5fr;align-items:end;gap:var(--s-5)}
+  .compare-stage{padding-block:var(--s-2)}
+  .glow{display:block;position:absolute;z-index:0;inset-block:-40px;inset-inline:calc(54% - 28px) calc(-1*var(--pad));overflow:hidden;color:var(--ink);background:var(--hatch)}
+  .beam{position:absolute;inset-inline:0;top:8%;block-size:clamp(72px,9vw,128px);background:var(--copper);box-shadow:inset 0 2px 0 rgb(255 255 255/.55),inset 0 -6px 12px rgb(10 12 11/.35)}
+  .pane{display:block;position:absolute;z-index:1;inset-block:0;inset-inline:54% 0;border-radius:2px;background:rgb(255 255 255/.52);
+    -webkit-backdrop-filter:blur(24px) saturate(1.15);backdrop-filter:blur(24px) saturate(1.15);
+    border:1px solid rgb(255 255 255/.75);box-shadow:inset 0 1px 0 var(--sheet),inset 0 0 0 1px rgb(255 255 255/.25),0 34px 50px -30px rgb(10 12 11/.5),0 2px 10px rgb(10 12 11/.12)}
+  .compare{position:relative;z-index:2;table-layout:fixed}
+  .compare thead{position:static;inline-size:auto;block-size:auto;overflow:visible;clip-path:none;display:table-header-group}
+  .compare tr{display:table-row;padding:0;border:0}
+  .compare thead td{inline-size:25%}
+  .compare thead th:nth-child(2){inline-size:29%}
+  .compare thead th{font-size:var(--t-body);padding-block:var(--s-3);border-block-end:1px solid var(--ink)}
+  .compare tbody th,.compare td{display:table-cell;vertical-align:top;padding-block:var(--s-3);border-block-end:1px solid var(--hair)}
+  .compare tbody tr:last-child>*{border-block-end:0}
+  .compare tbody th{font:600 var(--t-body)/1.4 var(--f-body);margin:0;padding-inline-end:var(--s-3)}
+  .compare td::before{content:none}
+  .compare td:nth-child(2),.compare thead th:nth-child(2){padding-inline-end:var(--s-5)}
+  .compare td:last-child,.compare thead th:last-child{margin:0;padding-inline:var(--s-4);background:none;box-shadow:none;font-weight:600}
+  .compare td:last-child{font-size:1.1875rem;line-height:1.4}
+  .compare thead .mark{min-block-size:0;font-size:1.25rem}
+}
+
+@media (min-width:1024px){
+  .nav nav{display:flex}
+  .nav .btn{margin-inline-start:0}
+  .pitch{grid-template-columns:7fr 1fr 4fr;align-items:end}
+  .pitch-side{grid-column:3}
+  .step-label{display:block}
+  .steps{grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:auto auto auto auto;column-gap:var(--s-3)}
+  .steps>li{grid-template-columns:100%;grid-template-rows:subgrid;grid-row:span 4;row-gap:var(--s-1);padding-block:var(--s-2) 0}
+  .steps>li>*,.steps .when{grid-column:auto;grid-row:auto;padding:0}
+  .steps>li>p:not(.when){font-size:1.0625rem}
+  .docs{gap:var(--s-4);inline-size:calc(400% + 3*var(--s-3));margin-block-start:var(--s-5);perspective:900px}
+  .docs li{flex:none;inline-size:112px}
+  .docs .nda{padding-inline-end:var(--s-4)}
+  .sheet{transform:rotateX(8deg);transform-origin:50% 100%}
+  .contact-side{margin-inline-start:25%}
+}
+
+/* Motion. One move per chapter, scrubbed by scroll where the browser can; end states everywhere else. */
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+  .gap .ruler::before{animation:draw var(--d-draw) var(--ease-out) both;transform-origin:0 50%}
+  .gap .hatch{animation:fade var(--d-draw) var(--ease-out) var(--d-mid) both}
+  @supports (animation-timeline:view()){
+    .mini .hatch{animation:rise linear both;animation-timeline:view();animation-range:entry 20% cover 35%}
+    .segs{animation:wipe linear both;animation-timeline:view();animation-range:entry 60% cover 50%}
+    .beam{animation:pass linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+    .closed .bar{animation:wipe linear both;animation-timeline:view();animation-range:entry 30% cover 40%}
+    .closed .bar::after{animation:sheen linear both;animation-timeline:view();animation-range:cover 40% cover 62%}
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  .flap{d:path("M.75 .75 L10 7.5 L19.25 .75");transition:none}
+  .btn{transition:none}
+}
+@keyframes draw{from{transform:scaleX(0)}}
+@keyframes fade{from{opacity:0}}
+@keyframes rise{from{clip-path:inset(75% 0 0 0)}to{clip-path:inset(0)}}
+@keyframes wipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0)}}
+@keyframes pass{from{top:-12%}to{top:88%}}
+@keyframes sheen{from{translate:-100% 0}to{translate:900% 0}}

@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Shaheen Funding | Funding advisory for UAE businesses</title>
 <meta name="description" content="Independent funding advisers for UAE businesses. Offers from 10+ UAE banks and financiers within 4–7 days, funds in 3–4 weeks, no upfront fees.">
 <link rel="canonical" href="https://shaheenfunding.com/">
@@ -12,354 +14,168 @@
 <meta property="og:description" content="Independent funding advisers for UAE businesses. Offers from 10+ UAE banks and financiers within 4–7 days, funds in 3–4 weeks, no upfront fees.">
 <meta property="og:url" content="https://shaheenfunding.com/">
 <meta property="og:image" content="https://shaheenfunding.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shaheen Funding. Funding for UAE businesses, from the lenders that fit.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#faf9f5">
+<meta name="twitter:title" content="Shaheen Funding | Funding advisory for UAE businesses">
+<meta name="twitter:description" content="Independent funding advisers for UAE businesses. Offers from 10+ UAE banks and financiers within 4–7 days, funds in 3–4 weeks, no upfront fees.">
+<meta name="theme-color" content="#EEF0EC">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/big-shoulders-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/site.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Shaheen Funding",
-"url":"https://shaheenfunding.com/","areaServed":"AE",
-"description":"Independent funding advisers for UAE businesses. Offers from 10+ UAE banks and financiers within 4–7 days, funds in 3-4 weeks, no upfront fees."}
+[{"@context":"https://schema.org","@type":"ProfessionalService","name":"Shaheen Funding",
+"url":"https://shaheenfunding.com/","logo":"https://shaheenfunding.com/favicon.svg","areaServed":"AE",
+"description":"Independent funding advisers for UAE businesses. Offers from 10+ UAE banks and financiers within 4–7 days, funds in 3–4 weeks, no upfront fees."},
+{"@context":"https://schema.org","@type":"WebSite","name":"Shaheen Funding","url":"https://shaheenfunding.com/"}]
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&text=ShaenFudig&display=swap"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap"></noscript>
-<link rel="preconnect" href="https://cdnjs.cloudflare.com">
-<style>
-@font-face{font-family:"Source Serif 4 Fallback";src:local("Georgia");size-adjust:93.25%;ascent-override:111.10%;descent-override:35.92%;line-gap-override:0%}
-@font-face{font-family:"Instrument Sans Fallback";src:local("Arial");size-adjust:103.75%;ascent-override:93.49%;descent-override:24.10%;line-gap-override:0%}
-:root{--ivory-light:#faf9f5;--ivory-medium:#f0eee6;--ivory-dark:#e8e6dc;--slate-dark:#141413;
---slate-medium:#141413;--slate-light:#2b2a27;--cloud-medium:#e8e6dc;--rule-dark:#3d3d3a;--clay:#d97757;--accent:#c6613f;
---serif:"Source Serif 4","Source Serif 4 Fallback",Georgia,serif;--sans:"Instrument Sans","Instrument Sans Fallback",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
---fs-display:clamp(40px,6.4vw,76px);--fs-h2:clamp(30px,4vw,46px);--fs-h3:24px;
---fs-lead:clamp(18px,1.6vw,20px);--fs-body:17px;--fs-sm:15px;--fs-label:12px;--fs-stat:clamp(28px,3vw,36px)}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-padding-top:84px}
-body{margin:0;background:var(--ivory-light);color:var(--slate-dark);font:400 var(--fs-body)/1.65 var(--sans);
--webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-a{color:var(--slate-dark);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;
-text-decoration-color:var(--slate-light);transition:text-decoration-color .2s ease}
-a:hover{text-decoration-color:var(--slate-dark)}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
-.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.w{max-width:1120px;margin:0 auto;padding:0 28px}
-header{position:sticky;top:0;z-index:5;background:rgba(250,249,245,.92);backdrop-filter:blur(8px);
-border-bottom:1px solid var(--ivory-dark);transition:background-color .2s ease,border-color .2s ease}
-header.scrolled{background:rgba(250,249,245,.97);border-bottom-color:#dcd9cc}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;height:68px}
-.word{font:900 21px/1 "Nunito","Arial Black",sans-serif;letter-spacing:-.01em;text-decoration:none;display:inline-flex;align-items:center;
-gap:.48em;white-space:nowrap;transition:color .2s ease}
-.word i{width:.48em;height:.48em;border-radius:50%;background:var(--clay);display:inline-block}
-nav{flex:1;display:flex;justify-content:center;gap:26px;font-size:var(--fs-sm)}
-nav a{text-decoration:none;color:var(--slate-medium);position:relative;padding:6px 0;transition:color .2s ease}
-nav a:hover{color:var(--slate-dark)}
-nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--accent);
-transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
-nav a.active{color:var(--slate-dark)}
-nav a.active::after{transform:scaleX(1)}
-.btn{display:inline-block;padding:13px 22px;border-radius:999px;background:var(--slate-dark);color:var(--ivory-light);
-border:1px solid transparent;text-decoration:none;font-weight:500;font-size:var(--fs-sm);white-space:nowrap;cursor:pointer;
-transition:background-color .2s ease,border-color .2s ease,color .2s ease,transform .15s cubic-bezier(.2,.7,.2,1)}
-.btn:hover{background:#3d3d3a}
-.btn:active{transform:scale(.98)}
-.btn.ghost{background:transparent;color:var(--slate-dark);border-color:var(--slate-light)}
-.btn.ghost:hover{border-color:var(--slate-dark);background:transparent}
-.btn.quiet{background:transparent;color:var(--slate-dark);border-color:var(--slate-light)}
-.btn.quiet:hover{border-color:var(--slate-dark);background:transparent}
-header.scrolled .btn.quiet{background:var(--slate-dark);color:var(--ivory-light);border-color:transparent}
-header.scrolled .btn.quiet:hover{background:#3d3d3a}
-.hero{padding-block:120px 80px}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
-.hero-routes{width:100%;height:auto;display:block}
-.eyebrow{font-size:var(--fs-label);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--slate-light);margin:0 0 24px}
-h1{font:400 var(--fs-display)/1.04 var(--serif);letter-spacing:-.025em;margin:0 0 28px;max-width:22ch;text-wrap:balance}
-h1 em{font-style:italic;color:var(--accent)}
-.lede{font-size:var(--fs-lead);line-height:1.55;color:var(--slate-light);max-width:56ch;margin:0 0 40px}
-.ctas{display:flex;gap:12px;flex-wrap:wrap}
-.band{background:var(--slate-dark);color:var(--ivory-light)}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
-.stat{position:relative;padding:44px 32px}
-.stat:first-child{padding-left:0}
-.stat:last-child{padding-right:0}
-.stat .vr{position:absolute;left:0;top:44px;bottom:44px;width:1px;background:var(--rule-dark);transform-origin:top}
-.stat:first-child .vr{display:none}
-.stat b{display:block;font:400 var(--fs-stat)/1.05 var(--serif);color:var(--clay);margin-bottom:12px;letter-spacing:-.02em;text-wrap:balance}
-.stat .fact{font:400 22px/1.25 var(--serif);color:var(--ivory-light);margin:0 0 12px;letter-spacing:-.01em;text-wrap:balance}
-.stat .lbl{color:var(--cloud-medium);font-size:var(--fs-sm);display:block;text-wrap:balance}
-section{padding:104px 0}
-section[id]{scroll-margin-top:84px}
-.kicker{display:flex;align-items:center;gap:14px;font-size:var(--fs-label);font-weight:600;letter-spacing:.14em;
-text-transform:uppercase;color:var(--slate-light);margin:0 0 20px}
-.kicker:before{content:"";width:28px;height:2px;background:var(--accent);transform:scaleX(var(--kx,1));
-transform-origin:left;transition:transform .6s cubic-bezier(.65,0,.35,1)}
-h2{font:400 var(--fs-h2)/1.12 var(--serif);letter-spacing:-.02em;margin:0 0 20px;max-width:24ch;text-wrap:balance}
-h3{text-wrap:balance}
-.intro{font-size:var(--fs-lead);color:var(--slate-light);max-width:62ch;margin:0 0 56px}
-.tight{padding-top:0}
-.compare{background:var(--ivory-medium);border-radius:18px;padding:36px;display:grid;gap:18px}
-.row{display:grid;grid-template-columns:minmax(200px,1.15fr) 1fr 1fr;gap:28px;padding-bottom:20px;border-bottom:1px solid var(--ivory-dark);align-items:baseline}
-.row>[role=cell]:not(.us){color:var(--slate-light)}
-.row:last-child{border-bottom:0;padding-bottom:0}
-.row.head{font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--slate-light);padding-bottom:14px;border-bottom:1px solid var(--cloud-medium)}
-.row .q{display:block;font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.35;color:var(--slate-dark);font-weight:400}
-.row .us{font-weight:600;padding-left:14px;border-left:2px solid var(--accent);text-wrap:balance}
-.row.head .us{color:var(--slate-dark);display:flex;align-items:center;gap:8px}
-.row.head .us::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--clay);flex:none}
-.cards{display:grid;grid-template-columns:7fr 5fr;grid-template-rows:auto auto;gap:20px}
-.card{background:var(--ivory-medium);border-radius:18px;padding:36px 32px;display:flex;flex-direction:column;gap:10px;
-transition:transform .35s cubic-bezier(.2,.7,.2,1),background-color .35s ease}
-.card.lead{grid-row:1/3;justify-content:center;background:var(--ivory-dark)}
-.card h3{font:500 var(--fs-h3)/1.2 var(--serif);margin:0;letter-spacing:-.01em}
-.card.lead h3{font-size:28px}
-.card .tag{order:-1;font-size:var(--fs-label);color:var(--slate-light);letter-spacing:.08em;text-transform:uppercase;font-weight:600}
-.card p{margin:0;color:var(--slate-medium)}
-@media (hover:hover){.card:hover{transform:translateY(-3px);background:var(--ivory-dark)}}
-.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:40px 32px}
-.paid{margin:48px 0 0;padding:24px 28px;border-left:2px solid var(--accent);background:var(--ivory-medium);border-radius:0 12px 12px 0;font-size:var(--fs-lead);max-width:62ch}
-.step{position:relative;padding-top:22px}
-.step .rule{position:absolute;top:0;left:0;right:0;height:1px;background:var(--ivory-dark);transform-origin:left}
-.step .n{font:600 var(--fs-label)/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:#b4552f;display:block;margin-bottom:14px}
-.step h3{font:500 var(--fs-h3)/1.25 var(--serif);margin:0 0 10px}
-.step p{margin:0;color:var(--slate-medium)}
-.who{background:var(--ivory-medium)}
-.split{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start}
-#who .split{align-items:center}
-.chips{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 0;padding:0}
-.chip{background:var(--ivory-light);border-radius:6px;padding:8px 14px;font-size:var(--fs-sm);color:var(--slate-medium)}
-.contact-box{background:var(--slate-dark);color:var(--ivory-light);border-radius:22px;padding:64px 56px;display:grid;
-grid-template-columns:1.3fr 1fr;gap:40px;align-items:end}
-.contact-box h2{color:var(--ivory-light);margin:0 0 14px;max-width:16ch}
-.contact-box p{color:var(--cloud-medium);margin:0;max-width:46ch}
-.contact-box .btn{background:var(--ivory-light);color:var(--slate-dark);margin-right:20px}
-.contact-box .btn:hover{background:var(--ivory-medium)}
-.contact-box .mail{display:inline-block;margin-top:14px;color:var(--cloud-medium);font-size:var(--fs-sm);text-decoration-color:var(--cloud-medium)}
-.contact-box .mail:hover{color:var(--ivory-light);text-decoration-color:var(--ivory-light)}
-footer{border-top:1px solid var(--ivory-dark)}
-.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding-block:30px;color:var(--slate-light);font-size:var(--fs-label)}
-.foot a{display:inline-block;padding:10px 0}
-@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
-@media (prefers-reduced-motion:reduce){
-*,*:before,*:after{transition-duration:.01ms!important;transition-delay:0ms!important;animation-duration:.01ms!important;
-animation-iteration-count:1!important;scroll-behavior:auto!important}.card:hover{transform:none}}
-@media (max-width:1100px){.steps{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}.card.lead{grid-row:auto}}
-@media (max-width:860px){nav{display:none}
-.hero{padding-block:80px 56px}
-.hero-grid{grid-template-columns:1fr}.hero-routes{display:none}
-section{padding:72px 0}
-.split,.contact-box{grid-template-columns:1fr}
-.contact-box{padding:44px 28px}
-.intro{margin-bottom:40px}
-header .btn{padding:10px 16px;font-size:14px}
-.stat{padding:26px 0;border-bottom:1px solid var(--rule-dark)}
-.stat:last-child{border-bottom:0}
-.stat .vr{display:none}
-.foot a{padding:12px 0}}
-@media (max-width:640px){.steps{grid-template-columns:1fr}
-.row{grid-template-columns:1fr 1fr;gap:10px 16px;font-size:15px;align-items:start}
-.row .q{font-size:17px;margin-bottom:2px}
-.row [role=rowheader]{grid-column:1/-1}
-.row.head>span{display:none}
-.row.head{position:sticky;top:69px;z-index:1;background:var(--ivory-medium);padding-top:8px}
-.compare{padding:26px 20px}}
-@media (max-width:380px){.word{font-size:18px}}[hidden]{display:none!important}.git-alt{font-size:14px;margin:14px 0 0}.git-alt a{color:inherit}
-</style>
 </head>
 <body>
-<header><div class="w bar">
-<a class="word" href="#top"><i aria-hidden="true"></i>Shaheen Funding</a>
-<nav aria-label="Main"><a href="#why">Why us</a><a href="#services">What we arrange</a><a href="#process">How we work</a><a href="#who">Who we work with</a></nav>
-<a class="btn quiet git" href="#contact" aria-label="Get in touch by email">Get in touch</a>
-</div></header>
+<a class="skip" href="#main">Skip to content</a>
 
-<main id="top">
-<div class="w hero">
-<div class="hero-grid">
-<div>
-<p class="eyebrow rise d1">Funding advisory &middot; United Arab Emirates</p>
-<h1 class="rise d2">Funding for UAE businesses, from the lenders <em>that fit.</em></h1>
-<p class="lede rise d3">We sit on your side of the table. We build your file and take it to the 10+ UAE banks and financiers whose appetite fits. Offers within 4–7 days, funds in 3&ndash;4 weeks.</p>
-<div class="ctas rise d4"><a class="btn git" href="#contact" aria-label="Get in touch by email">Get in touch</a><a class="btn ghost" href="/Shaheen-Funding-Product-Brief.pdf" download="Shaheen Funding - Product Brief.pdf">Product brief (PDF)</a></div>
+<header class="nav">
+<div class="wrap">
+<a class="mark" href="/" aria-label="Shaheen Funding, home"><span class="dot"></span>Shaheen Funding</a>
+<nav aria-label="Sections">
+<a href="#who">Who we work with</a>
+<a href="#what">What we arrange</a>
+<a href="#how">How we work</a>
+<a href="#why">Why us</a>
+</nav>
+<a class="btn btn-nav git" href="#contact" aria-label="Get in touch by email">Get in touch</a>
 </div>
-<svg class="hero-routes" viewBox="0 0 420 360" fill="none" aria-hidden="true">
-<path class="hl" pathLength="1" stroke="#b0aea5" stroke-width="1" d="M62 186Q196 44 366 40"/>
-<path class="hl" pathLength="1" stroke="#b0aea5" stroke-width="1" d="M62 186Q206 66 366 72"/>
-<path class="hl" pathLength="1" stroke="#b0aea5" stroke-width="1" d="M62 186Q216 96 366 104"/>
-<path class="hl" pathLength="1" stroke="#b0aea5" stroke-width="1" d="M62 186Q226 122 366 136"/>
-<path class="hl" pathLength="1" stroke="#b0aea5" stroke-width="1" d="M62 186Q230 152 366 168"/>
-<path class="hl" pathLength="1" stroke="#b0aea5" stroke-width="1" d="M62 186Q226 190 366 200"/>
-<path class="hl" pathLength="1" stroke="#b0aea5" stroke-width="1" d="M62 186Q216 224 366 232"/>
-<path class="hl" pathLength="1" stroke="#b0aea5" stroke-width="1" d="M62 186Q206 254 366 264"/>
-<path class="hl" pathLength="1" stroke="#b0aea5" stroke-width="1" d="M62 186Q196 284 366 296"/>
-<path class="hl" pathLength="1" stroke="#b0aea5" stroke-width="1" d="M62 186Q186 312 366 328"/>
-<path class="accent" pathLength="1" stroke="#c6613f" stroke-width="1.5" d="M62 186Q238 96 366 136"/>
-<g fill="#e8e6dc" stroke="#b0aea5">
-<circle cx="366" cy="40" r="4"/><circle cx="366" cy="72" r="4"/><circle cx="366" cy="104" r="4"/>
-<circle cx="366" cy="136" r="4"/><circle cx="366" cy="168" r="4"/><circle cx="366" cy="200" r="4"/>
-<circle cx="366" cy="232" r="4"/><circle cx="366" cy="264" r="4"/><circle cx="366" cy="296" r="4"/>
-<circle cx="366" cy="328" r="4"/></g>
-<circle cx="366" cy="136" r="6" stroke="#c6613f" stroke-width="1.5" fill="none"/>
-<circle cx="62" cy="186" r="7" fill="#d97757" stroke="#faf9f5" stroke-width="3"/>
-</svg>
-</div>
-</div>
+</header>
 
-<div class="band"><div class="w stats">
-<div class="stat"><i class="vr" aria-hidden="true"></i><b><span class="num">10</span>+</b><span class="lbl">UAE banks and financiers</span></div>
-<div class="stat"><i class="vr" aria-hidden="true"></i><b>4–7</b><span class="lbl">Days to an offer</span></div>
-<div class="stat"><i class="vr" aria-hidden="true"></i><b>3&ndash;4</b><span class="lbl">Weeks to funds</span></div>
-<div class="stat"><i class="vr" aria-hidden="true"></i><b>0</b><span class="lbl">Upfront fees</span></div>
-</div></div>
+<main id="main">
 
-<section id="why"><div class="w">
-<p class="kicker">Why Shaheen Funding</p>
-<h2 data-reveal>Going to your bank alone vs. going with us.</h2>
-<p class="intro" data-reveal>On your own, you speak to a branch relationship manager with no say. We take your case to senior credit decision-makers, put it on top of the stack, and push for faster offers and higher limits.</p>
-<div class="compare" role="table" aria-label="Going to your bank alone compared with going through Shaheen Funding">
-<div class="row head" role="row"><span></span><div role="columnheader">On your own</div><div class="us" role="columnheader">Shaheen Funding</div></div>
-<div class="row" role="row"><div role="rowheader"><span class="q">Who do you speak to?</span></div><div role="cell">A branch relationship manager with no say</div><div class="us" role="cell">Senior credit decision-makers we deal with directly</div></div>
-<div class="row" role="row"><div role="rowheader"><span class="q">Where does your file sit?</span></div><div role="cell">In the pile</div><div class="us" role="cell">On top of the stack</div></div>
-<div class="row" role="row"><div role="rowheader"><span class="q">How many lenders see it?</span></div><div role="cell">One. A &ldquo;no&rdquo; ends the search</div><div class="us" role="cell">10+ UAE banks and financiers matched to your case</div></div>
-<div class="row" role="row"><div role="rowheader"><span class="q">How fast?</span></div><div role="cell">Their timeline</div><div class="us" role="cell">We push for faster offers</div></div>
-<div class="row" role="row"><div role="rowheader"><span class="q">How big?</span></div><div role="cell">Whatever one bank offers</div><div class="us" role="cell">We push for higher limits</div></div>
-<div class="row" role="row"><div role="rowheader"><span class="q">After the first facility?</span></div><div role="cell">Start again from zero</div><div class="us" role="cell">Your next facility is already lined up</div></div>
+<section class="hero">
+<div class="wrap">
+<div class="gap">
+<p class="due"><span class="num">30</span> <span class="cap">Payroll and suppliers are due in 30 days.</span></p>
+<p class="paid"><span class="num">120</span> <span class="cap">Clients pay in 60, 90 or 120.</span></p>
+<div class="ruler" aria-hidden="true"><i class="hatch"></i><i class="tick t0"></i><i class="tick t30"></i><i class="tick t60"></i><i class="tick t90"></i><i class="tick t120"></i><b class="n60">60</b><b class="n90">90</b></div>
 </div>
-</div></section>
+<div class="pitch">
+<h1>Funding for UAE businesses, from the lenders that fit.</h1>
+<div class="pitch-side">
+<p class="lede">We sit on your side of the table. We build your file and take it to the 10+ UAE banks and financiers whose appetite fits. Offers within 4–7 days, funds in 3–4 weeks.</p>
+<p class="ctas"><a class="btn git" href="#contact" aria-label="Get in touch by email"><svg class="env" viewBox="0 0 20 14" width="20" height="14" aria-hidden="true"><rect x=".75" y=".75" width="18.5" height="12.5"/><path class="flap" d="M.75 .75 L10 .75 L19.25 .75"/></svg>Get in touch</a><a class="pdf" href="/Shaheen-Funding-Product-Brief.pdf" download="Shaheen Funding - Product Brief.pdf">Product brief (PDF)</a></p>
+</div>
+</div>
+</div>
+</section>
 
-<section id="services" class="tight"><div class="w">
-<p class="kicker">What we arrange</p>
-<h2 data-reveal>The right facility for the way you get paid.</h2>
-<p class="intro" data-reveal>Payroll and suppliers are due in 30 days. Clients pay in 60, 90 or 120. We find the facility that closes that gap, then line up the next one.</p>
-<div class="cards">
-<div class="card lead" data-reveal><span class="tag">B2B services and contracting</span><h3>Invoice discounting</h3><p>A limit is approved once, say AED 1M, and held for you at the bank. For the next 3&ndash;4 years you draw on it against your invoices, repay and draw again as often as you need. Payroll and suppliers get paid on time while clients take 60&ndash;120 days to pay.</p></div>
-<div class="card" data-reveal><span class="tag">Food &amp; beverage and retail</span><h3>Funding against your card sales</h3><p>Open, refit or stock up without waiting. Sized on what goes through your card machines.</p></div>
-<div class="card" data-reveal><span class="tag">Manufacturing and trading</span><h3>Materials, stock and equipment</h3><p>Funding for raw materials, stock and equipment, so orders get filled before buyers pay.</p></div>
+<section class="night who" id="who">
+<div class="wrap">
+<div class="who-head">
+<h2>Established UAE companies with a timing problem.</h2>
+<p>Profitable on paper, short of cash this month. If clients pay later than your costs fall due, we can help.</p>
 </div>
-</div></section>
+<div class="what-head" id="what">
+<h2 id="what-h">The right facility for the way you get paid.</h2>
+<p>Payroll and suppliers are due in 30 days. Clients pay in 60, 90 or 120. We find the facility that closes that gap, then line up the next one.</p>
+</div>
+<table class="ledger" aria-labelledby="what-h">
+<thead><tr><th scope="col">Who we work with</th><th scope="col">What we arrange</th></tr></thead>
+<tbody>
+<tr>
+<th scope="row"><span class="seg-name">B2B services and contracting</span><span class="ruler mini" aria-hidden="true"><i class="hatch"></i><i class="tick t0"></i><i class="tick t30"></i><i class="tick t120"></i></span></th>
+<td><strong>Invoice discounting</strong><p>A limit is approved once, say AED 1M, and held for you at the bank. For the next 3–4 years you draw on it against your invoices, repay and draw again as often as you need. Payroll and suppliers get paid on time while clients take 60–120 days to pay.</p></td>
+</tr>
+<tr>
+<th scope="row"><span class="seg-name">Food &amp; beverage and retail</span><span class="ruler mini" aria-hidden="true"><i class="hatch"></i><i class="tick t0"></i><i class="tick t30"></i><i class="tick t120"></i></span></th>
+<td><strong>Funding against your card sales</strong><p>Open, refit or stock up without waiting. Sized on what goes through your card machines.</p></td>
+</tr>
+<tr>
+<th scope="row"><span class="seg-name">Manufacturing and trading</span><span class="ruler mini" aria-hidden="true"><i class="hatch"></i><i class="tick t0"></i><i class="tick t30"></i><i class="tick t120"></i></span></th>
+<td><strong>Materials, stock and equipment</strong><p>Funding for raw materials, stock and equipment, so orders get filled before buyers pay.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
 
-<section id="process" class="tight"><div class="w">
-<p class="kicker">How we work</p>
-<h2 data-reveal>Offer in 4&ndash;7 days. Funded within 3&ndash;4 weeks. You approve every step.</h2>
-<div class="steps">
-<div class="step"><i class="rule" aria-hidden="true"></i><span class="n">Day 1</span><h3>First call</h3><p>20 minutes on how your cash moves.</p></div>
-<div class="step"><i class="rule" aria-hidden="true"></i><span class="n">Days 2&ndash;3</span><h3>File built</h3><p>Mutual NDA, then four documents: trade licence, 12 months of bank statements, last 4 VAT returns, MOA.</p></div>
-<div class="step"><i class="rule" aria-hidden="true"></i><span class="n">Days 4–7</span><h3>Offers in</h3><p>From matched lenders, each one approved by you.</p></div>
-<div class="step"><i class="rule" aria-hidden="true"></i><span class="n">Weeks 3&ndash;4</span><h3>Official approval and submission</h3><p>With your sign-off we submit the case and the funds land.</p></div>
-<div class="step"><i class="rule" aria-hidden="true"></i><span class="n">Then</span><h3>Next facility</h3><p>We line up your next facility.</p></div>
+<section class="how" id="how">
+<div class="wrap">
+<h2>Offer in <span class="nb">4–7 days.</span> Funded within <span class="nb">3–4 weeks.</span> You approve every step.</h2>
+<div class="axis" aria-hidden="true">
+<div class="segs"><i class="seg s1"></i><i class="seg s2"></i><i class="seg s3"></i><i class="seg s4"></i></div>
+<span class="step-label l1">Day 1</span><span class="step-label l2">Days 2–3</span><span class="step-label l3">Days 4–7</span><span class="step-label l4">Weeks 3–4</span>
+<i class="tick t30"></i><b class="n30">30</b><b class="n120">120</b>
 </div>
-<p class="paid" data-reveal><b>How we&rsquo;re paid.</b> No upfront fees. We only earn a success fee once the money lands in your account.</p>
-</div></section>
-
-<section id="who" class="who"><div class="w split">
-<div>
-<p class="kicker">Who we work with</p>
-<h2 data-reveal>Established UAE companies with a timing problem.</h2>
-<p class="intro" data-reveal style="margin-bottom:0">Profitable on paper, short of cash this month. If clients pay later than your costs fall due, we can help.</p>
-</div>
-<ul class="chips" aria-label="Who we work with">
-<li class="chip" data-reveal>Food &amp; beverage and retail</li>
-<li class="chip" data-reveal>B2B services and contracting</li>
-<li class="chip" data-reveal>Manufacturing and trading</li>
+<ol class="steps">
+<li><p class="when">Day 1</p><h3>First call</h3><p>20 minutes on how your cash moves.</p></li>
+<li><p class="when">Days 2–3</p><h3>File built</h3><p>Mutual NDA, then four documents: trade licence, 12 months of bank statements, last 4 VAT returns, MOA.</p>
+<ul class="docs" aria-hidden="true">
+<li class="nda"><i class="sheet"></i>Mutual NDA</li>
+<li><i class="sheet"></i>Trade licence</li>
+<li><i class="sheet"></i>12 months of bank statements</li>
+<li><i class="sheet"></i>Last 4 VAT returns</li>
+<li><i class="sheet"></i>MOA</li>
 </ul>
-</div></section>
-
-<section id="contact"><div class="w">
-<div class="contact-box">
-<div><h2>Tell us what you need funding for.</h2><p>Twenty minutes tells us whether funding fits. Send a short note on your business and what you need funding for.</p></div>
-<div><a class="btn git" href="#contact" aria-label="Get in touch by email" hidden>Get in touch</a><noscript><a class="btn" aria-label="Get in touch by email" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#108;&#105;&#64;&#115;&#104;&#97;&#104;&#101;&#101;&#110;&#102;&#117;&#110;&#100;&#105;&#110;&#103;&#46;&#99;&#111;&#109;?subject=Funding%20enquiry%20-%20%3Ccompany%20name%3E&amp;body=Hi%20Ali%2C%0D%0A%0D%0ACompany%3A%20%0D%0AWhat%20we%20need%20funding%20for%3A%20%0D%0ARough%20amount%20(AED)%3A%20%0D%0ABest%20number%20to%20reach%20me%3A%20%0D%0A">Get in touch</a></noscript><p class="git-alt" aria-live="polite" hidden>No mail app opened? Open the draft in <a class="git-gm" href="#contact">Gmail</a> · <a class="git-ol" href="#contact">Outlook</a></p><br><a class="mail" href="/Shaheen-Funding-Product-Brief.pdf" download="Shaheen Funding - Product Brief.pdf">Download the product brief (PDF)</a></div>
+</li>
+<li><p class="when">Days 4–7</p><h3>Offers in</h3><p>From matched lenders, each one approved by you.</p></li>
+<li><p class="when">Weeks 3–4</p><h3>Official approval and submission</h3><p>With your sign-off we submit the case and the funds land.</p></li>
+<li><p class="when">Then</p><h3>Next facility</h3><p>We line up your next facility.</p></li>
+</ol>
 </div>
-</div></section>
+</section>
+
+<section class="why" id="why">
+<div class="wrap">
+<div class="why-head">
+<h2>Going to your bank alone vs. going with us.</h2>
+<p>On your own, you speak to a branch relationship manager with no say. We take your case to senior credit decision-makers, put it on top of the stack, and push for faster offers and higher limits.</p>
+</div>
+<div class="compare-stage">
+<div class="glow" aria-hidden="true"><i class="beam"></i></div>
+<div class="pane" aria-hidden="true"></div>
+<table class="compare">
+<thead><tr><td></td><th scope="col">On your own</th><th scope="col"><span class="mark"><span class="dot"></span>Shaheen Funding</span></th></tr></thead>
+<tbody>
+<tr><th scope="row">Who do you speak to?</th><td data-l="On your own">A branch relationship manager with no say</td><td data-l="Shaheen Funding">Senior credit decision-makers we deal with directly</td></tr>
+<tr><th scope="row">Where does your file sit?</th><td data-l="On your own">In the pile</td><td data-l="Shaheen Funding">On top of the stack</td></tr>
+<tr><th scope="row">How many lenders see it?</th><td data-l="On your own">One. A &ldquo;no&rdquo; ends the search</td><td data-l="Shaheen Funding">10+ UAE banks and financiers matched to your case</td></tr>
+<tr><th scope="row">How fast?</th><td data-l="On your own">Their timeline</td><td data-l="Shaheen Funding">We push for faster offers</td></tr>
+<tr><th scope="row">How big?</th><td data-l="On your own">Whatever one bank offers</td><td data-l="Shaheen Funding">We push for higher limits</td></tr>
+<tr><th scope="row">After the first facility?</th><td data-l="On your own">Start again from zero</td><td data-l="Shaheen Funding">Your next facility is already lined up</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<section class="night fee">
+<div class="wrap">
+<div class="fee-line"><h2>How we&rsquo;re paid.</h2> <p>No upfront fees. We only earn a success fee once the money lands in your account.</p></div>
+<div class="ruler closed" aria-hidden="true"><i class="bar"></i><i class="tick t0"></i><i class="tick t30"></i><i class="tick t60"></i><i class="tick t90"></i><i class="tick t120"></i><b class="n30">30</b><b class="n60">60</b><b class="n90">90</b><b class="n120">120</b></div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="wrap">
+<h2>Tell us what you need funding for.</h2>
+<div class="contact-side">
+<p class="lede">Twenty minutes tells us whether funding fits. Send a short note on your business and what you need funding for.</p>
+<p class="ctas"><a class="btn btn-xl git" href="#contact" aria-label="Get in touch by email" hidden><svg class="env" viewBox="0 0 20 14" width="20" height="14" aria-hidden="true"><rect x=".75" y=".75" width="18.5" height="12.5"/><path class="flap" d="M.75 .75 L10 .75 L19.25 .75"/></svg>Get in touch</a><noscript><a class="btn btn-xl" aria-label="Get in touch by email" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#108;&#105;&#64;&#115;&#104;&#97;&#104;&#101;&#101;&#110;&#102;&#117;&#110;&#100;&#105;&#110;&#103;&#46;&#99;&#111;&#109;?subject=Funding%20enquiry%20-%20%3Ccompany%20name%3E&amp;body=Hi%20Ali%2C%0D%0A%0D%0ACompany%3A%20%0D%0AWhat%20we%20need%20funding%20for%3A%20%0D%0ARough%20amount%20(AED)%3A%20%0D%0ABest%20number%20to%20reach%20me%3A%20%0D%0A">Get in touch</a></noscript></p>
+<p class="git-alt" aria-live="polite" hidden>No mail app opened? Open the draft in <a class="git-gm" href="#contact">Gmail</a> · <a class="git-ol" href="#contact">Outlook</a></p>
+<p class="opens">Opens an email draft to Ali Shaheen, Founder.</p>
+<p><a class="pdf" href="/Shaheen-Funding-Product-Brief.pdf" download="Shaheen Funding - Product Brief.pdf">Download the product brief (PDF)</a></p>
+</div>
+</div>
+</section>
+
 </main>
 
-<footer><div class="w foot">
-<span>&copy; 2026 Shaheen Funding &middot; Independent funding advisers, United Arab Emirates</span>
-</div></footer>
-
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js" integrity="sha384-XmJ9SoHtVOHoQUcKvFAzVXwdkKo1Ie3bhmSoIAkcdsHGaIrVJIkmozyq0FJeb/Ly" crossorigin="anonymous"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/ScrollTrigger.min.js" integrity="sha384-wl5TeDVvOWt30Pbf8aSo2ZrzsOjddu3avOBvHe+p+OhJt9gP6w9YXmDkN5DK2/dF" crossorigin="anonymous"></script>
-<script>
-(function(){
-var d=document;
-function boot(){
- if(!window.gsap||!window.ScrollTrigger)return;
- gsap.registerPlugin(ScrollTrigger);
- var header=d.querySelector('header');
- var mm=gsap.matchMedia();
- mm.add('(prefers-reduced-motion: no-preference)',function(){
-  ScrollTrigger.create({start:8,end:'max',onToggle:function(s){header.classList.toggle('scrolled',s.isActive)}});
-  d.querySelectorAll('section[id]').forEach(function(sec){
-   var link=d.querySelector('nav a[href="#'+sec.id+'"]');
-   if(!link)return;
-   ScrollTrigger.create({trigger:sec,start:'top center',end:'bottom center',
-    onToggle:function(s){link.classList.toggle('active',s.isActive)}});
-  });
-  var paths=d.querySelectorAll('.hero-routes .hl'),accent=d.querySelector('.hero-routes .accent');
-  if(paths.length){
-   gsap.set(paths,{strokeDasharray:1,strokeDashoffset:1});
-   if(accent)gsap.set(accent,{strokeDasharray:1,strokeDashoffset:1});
-   var tl=gsap.timeline({delay:.6});
-   tl.to(paths,{strokeDashoffset:0,duration:.9,stagger:.05,ease:'power2.out'});
-   if(accent)tl.to(accent,{strokeDashoffset:0,duration:.8,ease:'power2.inOut'},'-=.05');
-  }
-  var stats=[].slice.call(d.querySelectorAll('.stat'));
-  stats.forEach(function(st,i){
-   var vr=st.querySelector('.vr');
-   if(vr)gsap.set(vr,{scaleY:0});
-   gsap.set(st,{autoAlpha:0,y:16});
-   ScrollTrigger.create({trigger:st,start:'top 88%',once:true,onEnter:function(){
-    if(vr)gsap.to(vr,{scaleY:1,duration:.6,ease:'power2.out',delay:i*.12});
-    gsap.to(st,{autoAlpha:1,y:0,duration:.7,ease:'power3.out',delay:i*.12});
-   }});
-  });
-  var num=d.querySelector('.stat .num');
-  if(num)ScrollTrigger.create({trigger:'.stats',start:'top 88%',once:true,onEnter:function(){
-   var o={v:0};gsap.to(o,{v:10,duration:1.2,ease:'power2.out',
-    onUpdate:function(){num.textContent=Math.round(o.v)},onComplete:function(){num.textContent='10'}});
-  }});
-  d.querySelectorAll('.kicker').forEach(function(k){
-   k.style.setProperty('--kx','0');
-   ScrollTrigger.create({trigger:k,start:'top 88%',once:true,onEnter:function(){k.style.setProperty('--kx','1')}});
-  });
-  d.querySelectorAll('[data-reveal]').forEach(function(el){
-   var sibs=[].slice.call(el.parentElement.children).filter(function(x){return x.hasAttribute('data-reveal')});
-   var i=sibs.indexOf(el);
-   gsap.set(el,{autoAlpha:0,y:20});
-   ScrollTrigger.create({trigger:el,start:'top 88%',once:true,onEnter:function(){
-    gsap.to(el,{autoAlpha:1,y:0,duration:.8,ease:'power3.out',delay:.1+i*.08})}});
-  });
-  d.querySelectorAll('.step').forEach(function(st,i){
-   var rule=st.querySelector('.rule');if(rule)gsap.set(rule,{scaleX:0});
-   var kids=st.querySelectorAll('.n,h3,p');gsap.set(kids,{autoAlpha:0,y:12});
-   ScrollTrigger.create({trigger:st,start:'top 88%',once:true,onEnter:function(){
-    var dl=(i%4)*.18;
-    if(rule)gsap.to(rule,{scaleX:1,duration:.7,ease:'power2.out',delay:dl});
-    gsap.to(kids,{autoAlpha:1,y:0,duration:.6,stagger:.05,delay:dl+.15,ease:'power3.out'});
-   }});
-  });
-  var box=d.querySelector('.contact-box');
-  if(box){
-   var inner=box.querySelectorAll(':scope>div');
-   gsap.set(box,{clipPath:'inset(6% 4% round 22px)',scale:.985});
-   gsap.set(inner,{autoAlpha:0,y:16});
-   ScrollTrigger.create({trigger:box,start:'top 85%',once:true,onEnter:function(){
-    gsap.to(box,{clipPath:'inset(0% 0% round 22px)',scale:1,duration:1,ease:'power3.inOut'});
-    gsap.to(inner,{autoAlpha:1,y:0,duration:.7,stagger:.1,delay:.2,ease:'power3.out'});
-   }});
-  }
-  return function(){header.classList.remove('scrolled')};
- });
-}
-if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',boot);else boot();
-})();
-</script>
-<script>
-(function(){var u='ali',d='shaheenfunding.com',
-s=encodeURIComponent('Funding enquiry - <company name>'),
-b=encodeURIComponent('Hi Ali,\r\n\r\nCompany: \r\nWhat we need funding for: \r\nRough amount (AED): \r\nBest number to reach me: \r\n'),
-q='?subject='+s+'&body='+b, h='mailto:'+u+'@'+d+q, t=encodeURIComponent(u+'@'+d),
-gm='https://mail.google.com/mail/?view=cm&to='+t+'&su='+s+'&body='+b,
-ol='https://outlook.office.com/mail/deeplink/compose?to='+t+'&subject='+s+'&body='+b;
-document.querySelectorAll('a.git').forEach(function(a){a.href=h;a.hidden=false;
- a.addEventListener('click',function(){var p=document.querySelector('.git-alt');if(p){p.hidden=false;}});});
-document.querySelectorAll('a.git-gm').forEach(function(a){a.href=gm;});
-document.querySelectorAll('a.git-ol').forEach(function(a){a.href=ol;});})();
-</script>
+<footer class="foot">
+<div class="wrap">
+<a class="mark" href="/" aria-label="Shaheen Funding, home"><span class="dot"></span>Shaheen Funding</a>
+<p>Funding advisory · United Arab Emirates</p>
+<p>© 2026 Shaheen Funding · Independent funding advisers, United Arab Emirates</p>
+</div>
+</footer>
+<script src="/site.js" defer></script>
 </body>
 </html>
