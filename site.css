@@ -77,20 +77,22 @@ th{text-align:start;font-weight:500}
 .mark{display:inline-flex;align-items:center;gap:.42em;min-block-size:44px;font:900 1.25rem/1 var(--font-mark);letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
 .mark i{inline-size:.48em;block-size:.48em;border-radius:50%;background:var(--color-accent)}
 
-/* The one action: flat clay, ink type, an envelope whose flap opens on hover. No border, no inner rule. */
-.btn{position:relative;display:inline-flex;align-items:center;gap:var(--space-sm);min-block-size:52px;padding-inline:var(--space-lg);background:var(--color-accent);color:var(--color-accent-ink);
-  font:500 1.0625rem/1 var(--font-body);text-decoration:none;white-space:nowrap;border:0;border-radius:2px;
-  transition:background-color var(--dur-short) var(--ease-out),transform var(--dur-short) var(--ease-out)}
-.btn:hover{background:var(--color-accent-press)}
-.btn:active{transform:translateY(1px)}
-.btn-nav{min-block-size:44px;padding-inline:20px;font-size:var(--text-sm);
-  transition:background-color var(--dur-short) var(--ease-out),opacity var(--dur-short) var(--ease-out),visibility 0s var(--dur-short)}
+/* The one action: no box. Serif words on a clay underline that thickens on hover; the arrow leans in. */
+.btn{position:relative;display:inline-flex;align-items:center;min-block-size:44px;padding:0 1.25em 0 0;background:none;border:0;color:var(--color-ink);
+  font:400 var(--text-title)/1.1 var(--font-display);letter-spacing:var(--tracking-title);white-space:nowrap;
+  text-decoration:underline;text-decoration-color:var(--color-accent);text-decoration-thickness:2px;text-underline-offset:.24em;
+  transition:text-decoration-thickness var(--dur-short) var(--ease-out),color var(--dur-short) var(--ease-out)}
+.btn::after{content:"\2192";position:absolute;inset-inline-end:0;top:50%;translate:0 -50%;font-family:var(--font-body);font-size:.8em;color:var(--color-accent);transition:translate var(--dur-short) var(--ease-out)}
+.btn:hover,.btn:focus-visible{text-decoration-thickness:5px}
+.btn:hover::after,.btn:focus-visible::after{translate:.2em -50%}
+.btn:active{color:var(--color-accent-press)}
+.btn-nav{font:500 var(--text-sm)/1 var(--font-body);letter-spacing:0;text-decoration-thickness:1.5px;text-underline-offset:.35em;
+  transition:text-decoration-thickness var(--dur-short) var(--ease-out),opacity var(--dur-short) var(--ease-out),visibility 0s var(--dur-short)}
+.btn-nav:hover,.btn-nav:focus-visible{text-decoration-thickness:3px}
 /* site.js sets is-off while the hero action is on screen, so the first screen shows one Get in touch. */
 .btn-nav.is-off{opacity:0;visibility:hidden;transition:opacity var(--dur-short) var(--ease-out),visibility 0s}
-.btn-xl{min-block-size:52px;padding-inline:32px;font-size:1.1875rem;gap:var(--space-md)}
-.env{flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linejoin:round;overflow:visible}
-.flap{d:path("M.75 .75 L10 .75 L19.25 .75");transition:d var(--dur-short) var(--ease-in-out)}
-.btn:hover .flap,.btn:focus-visible .flap{d:path("M.75 .75 L10 7.5 L19.25 .75")}
+.btn-xl{font-size:var(--text-segment);text-decoration-thickness:3px}
+.btn-xl:hover,.btn-xl:focus-visible{text-decoration-thickness:6px}
 /* The brief: a small text link under the action, nothing more. */
 .pdf{display:inline-flex;align-items:center;min-block-size:44px;margin:0;font-size:var(--text-sm);color:var(--color-mark)}
 .pdf a{color:inherit}
@@ -233,7 +235,6 @@ th{text-align:start;font-weight:500}
   .sheet{margin-block-end:0}
   .foot p:last-child{margin-inline-start:0}
   .ctas{inline-size:100%}
-  .ctas .btn{flex:1 1 100%;justify-content:center}
 }
 
 @media (max-width:360px){
@@ -305,8 +306,7 @@ th{text-align:start;font-weight:500}
   }
 }
 @media (prefers-reduced-motion:reduce){
-  .flap{d:path("M.75 .75 L10 7.5 L19.25 .75");transition:none}
-  .btn,.btn-nav{transition:none}
+  .btn,.btn-nav,.btn::after{transition:none}
 }
 @keyframes draw{from{transform:scaleX(0)}}
 @keyframes fade{from{opacity:0}}
