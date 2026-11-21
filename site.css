@@ -227,8 +227,8 @@ th{text-align:start;font-weight:500}
 @media (max-width:480px){
   :root{--text-md:1rem;--text-numeral:21.5vw}
   .mark{font-size:1.125rem}
-  .due .cap{grid-area:3/1/4/-1;margin-block-start:var(--space-xs)}
-  .paid .cap{grid-area:4/1/5/-1}
+  .gap .cap{grid-area:3/1/4/-1;max-inline-size:46%;margin-block-start:var(--space-sm);font-size:var(--text-xs);line-height:1.45;padding:0}
+  .paid .cap{justify-self:end}
   .gap .ruler b{display:none}
   .gap .ruler{block-size:calc(var(--hatch-h) + 20px)}
   .docs{font-size:0;gap:var(--space-xs)}
