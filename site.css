@@ -93,7 +93,7 @@ th{text-align:start;font-weight:500}
   transition:transform var(--dur-short) var(--ease-out),box-shadow var(--dur-short) var(--ease-out),opacity var(--dur-short) var(--ease-out),visibility 0s var(--dur-short)}
 /* site.js sets is-off while the hero action is on screen, so the first screen shows one Get in touch. */
 .btn-nav.is-off{opacity:0;visibility:hidden;transition:opacity var(--dur-short) var(--ease-out),visibility 0s}
-.btn-xl{min-block-size:60px;padding-inline:40px;font-size:1.1875rem}
+.btn-xl{min-block-size:60px;padding-inline:var(--space-xl);font-size:1.1875rem}
 /* The brief: a small text link under the action, nothing more. */
 .pdf{display:inline-flex;align-items:center;min-block-size:44px;margin:0;font-size:var(--text-sm);color:var(--color-mark)}
 .pdf a{color:inherit}
