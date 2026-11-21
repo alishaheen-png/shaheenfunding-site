@@ -15,4 +15,12 @@
   });
   document.querySelectorAll('a.git-gm').forEach(function (a) { a.href = gm; });
   document.querySelectorAll('a.git-ol').forEach(function (a) { a.href = ol; });
+  // One Get in touch per screen: the nav action stays out of view while the hero action is visible.
+  var hero = document.querySelector('.hero a.git'), nav = document.querySelector('.nav a.git');
+  if (hero && nav && 'IntersectionObserver' in window) {
+    var top = nav.closest('.nav').offsetHeight, r = hero.getBoundingClientRect();
+    nav.classList.toggle('is-off', r.top < innerHeight && r.bottom > top);
+    new IntersectionObserver(function (e) { nav.classList.toggle('is-off', e[0].isIntersecting); },
+      { rootMargin: '-' + top + 'px 0px 0px 0px' }).observe(hero);
+  }
 })();

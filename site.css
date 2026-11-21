@@ -1,8 +1,8 @@
 /* Hallmark · shape: kept · genre: editorial · theme: Studio (deal 1/3, seed redesign-shaheenfunding-com-uae-4113·bb85f7bc·2026-11-20·r0) · redesign: restyle · copy: verbatim
  * hero: kept · nav: kept · footer: kept · imagery: none · signature: the 30 and 120 standing on a ruler with the gap between them drawn in orange
  * axes: light/roman-serif/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
-/* Hallmark · pre-emit critique: P4 H5 E4 S5 R4 V4 · weakest: P, the theme asks for one signal and the owner asked for a third colour; held the blue to one band and the light behind the glass */
-/* Hallmark · waive 81 · one ground, the proof grid and blue band under the frosted comparison pane · the owner asked for the comparison on frosted glass, and glass needs something behind it */
+/* Hallmark · pre-emit critique: P4 H5 E4 S5 R4 V4 · weakest: P, the theme asks for one signal and the owner asked for a third colour; the third colour is a deep navy-green on the two dark bands and the light behind the glass */
+/* Hallmark · waive 81 · one ground, the proof grid and navy-green band under the frosted comparison pane · the owner asked for the comparison on frosted glass, and glass needs something behind it */
 /* Hallmark · dismissed 58 · every word is the owner's and locked to the product brief PDF; the ledger and process screens carry their full sentences */
 /* shaheenfunding.com. One ruler (payroll due at 30, clients pay at 120) runs through the page.
    Every colour, face, size and duration is a token in :root; nothing below it holds a raw value. */
@@ -16,10 +16,10 @@
 
 :root{
   color-scheme:light;
-  --color-paper:oklch(97.2% 0.006 215); --color-paper-2:oklch(94% 0.009 215); --color-paper-3:oklch(90.5% 0.011 215); --color-paper-hi:oklch(99% 0.004 215);
-  --color-ink:oklch(16% 0.032 250); --color-rule:oklch(84% 0.010 225);
-  --color-accent:#D97757; --color-accent-press:#CC6947; --color-accent-ink:oklch(16% 0.032 250); --color-focus:oklch(52% 0.15 48);
-  --color-blue:oklch(38% 0.16 265); --color-blue-lift:oklch(46% 0.17 265);
+  --color-paper:oklch(97.2% 0.006 190); --color-paper-2:oklch(94% 0.009 190); --color-paper-3:oklch(90.5% 0.011 190); --color-paper-hi:oklch(99% 0.004 190);
+  --color-ink:oklch(16% 0.022 185); --color-rule:oklch(84% 0.010 190);
+  --color-accent:#D97757; --color-accent-press:#CC6947; --color-accent-ink:oklch(16% 0.022 185); --color-focus:oklch(52% 0.15 48);
+  --color-deep:#0F1E1C; --color-deep-lift:#243532; --color-deep-glow:color-mix(in oklab,#2F4A44 70%,transparent);
   --color-dot:color-mix(in oklab,var(--color-ink) 20%,transparent); --color-mark:color-mix(in oklab,var(--color-ink) 72%,transparent);
   --color-rule-dark:color-mix(in oklab,var(--color-paper-hi) 26%,transparent);
   --color-glass:color-mix(in oklab,var(--color-paper-hi) 58%,transparent); --color-glass-edge:color-mix(in oklab,var(--color-paper-hi) 80%,transparent);
@@ -77,23 +77,23 @@ th{text-align:start;font-weight:500}
 .mark{display:inline-flex;align-items:center;gap:.42em;min-block-size:44px;font:900 1.25rem/1 var(--font-mark);letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
 .mark i{inline-size:.48em;block-size:.48em;border-radius:50%;background:var(--color-accent)}
 
-/* The one action: a printed control. Orange fill, ink border, a second rule set inside it. */
+/* The one action: flat clay, ink type, an envelope whose flap opens on hover. No border, no inner rule. */
 .btn{position:relative;display:inline-flex;align-items:center;gap:var(--space-sm);min-block-size:52px;padding-inline:var(--space-lg);background:var(--color-accent);color:var(--color-accent-ink);
-  font:500 1.0625rem/1 var(--font-body);text-decoration:none;white-space:nowrap;border:var(--rule-hair) solid var(--color-ink);border-radius:2px;
+  font:500 1.0625rem/1 var(--font-body);text-decoration:none;white-space:nowrap;border:0;border-radius:2px;
   transition:background-color var(--dur-short) var(--ease-out),transform var(--dur-short) var(--ease-out)}
-.btn::after{content:"";position:absolute;inset:2px;border:var(--rule-hair) solid var(--color-mark);border-radius:1px;pointer-events:none;transition:opacity var(--dur-short) var(--ease-out)}
 .btn:hover{background:var(--color-accent-press)}
-.btn:hover::after,.btn:focus-visible::after{opacity:.45}
 .btn:active{transform:translateY(1px)}
-.btn-nav{min-block-size:44px;padding-inline:20px;font-size:var(--text-sm)}
+.btn-nav{min-block-size:44px;padding-inline:20px;font-size:var(--text-sm);
+  transition:background-color var(--dur-short) var(--ease-out),opacity var(--dur-short) var(--ease-out),visibility 0s var(--dur-short)}
+/* site.js sets is-off while the hero action is on screen, so the first screen shows one Get in touch. */
+.btn-nav.is-off{opacity:0;visibility:hidden;transition:opacity var(--dur-short) var(--ease-out),visibility 0s}
 .btn-xl{min-block-size:52px;padding-inline:32px;font-size:1.1875rem;gap:var(--space-md)}
 .env{flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linejoin:round;overflow:visible}
 .flap{d:path("M.75 .75 L10 .75 L19.25 .75");transition:d var(--dur-short) var(--ease-in-out)}
 .btn:hover .flap,.btn:focus-visible .flap{d:path("M.75 .75 L10 7.5 L19.25 .75")}
-/* The second action: the same printed control on paper, no fill. */
-.btn-2{background:var(--color-paper-hi)}
-.btn-2:hover{background:var(--color-paper-2)}
-.pdf{display:inline-flex;align-items:center;min-block-size:44px;font-weight:500;font-size:var(--text-sm)}
+/* The brief: a small text link under the action, nothing more. */
+.pdf{display:inline-flex;align-items:center;min-block-size:44px;margin:0;font-size:var(--text-sm);color:var(--color-mark)}
+.pdf a{color:inherit}
 .ctas{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-sm)}
 
 /* Nav: frosted paper, so the page slides under it. */
@@ -131,8 +131,8 @@ th{text-align:start;font-weight:500}
 .lede{font-size:var(--text-lead);line-height:1.5}
 .pitch-side{display:grid;gap:var(--space-lg)}
 
-/* The ink band. */
-.night{color:var(--color-paper-hi);background:var(--color-ink)}
+/* The dark navy-green bands, lit from one corner so they read deep, not flat. */
+.night{color:var(--color-paper-hi);background:radial-gradient(120% 90% at 12% 0%,var(--color-deep-glow),transparent 62%),radial-gradient(80% 70% at 100% 100%,color-mix(in oklab,var(--color-deep-lift) 60%,transparent),transparent 70%),var(--color-deep)}
 
 /* I. Who we work with / what we arrange: one ledger. */
 .who .wrap{padding-block:var(--section-gap-l) var(--section-gap-s)}
@@ -179,7 +179,7 @@ th{text-align:start;font-weight:500}
   background:repeating-linear-gradient(180deg,var(--color-rule) 0 1px,transparent 1px 16.6%) content-box,var(--color-paper-hi);box-shadow:var(--shadow-sheet)}
 
 /* III. Why us: the comparison. On wide screens our column sits on a pane of frosted glass
-   laid over the proof grid, with one band of blue behind it. */
+   laid over the proof grid, with one navy-green band behind it. */
 .why .wrap{padding-block:var(--section-gap) var(--section-gap-l)}
 .why-head{display:grid;gap:var(--space-lg);margin-block-end:var(--section-gap-s)}
 .why-head p{font-size:var(--text-lead)}
@@ -196,8 +196,8 @@ th{text-align:start;font-weight:500}
 .compare td:last-child::before{font:900 var(--text-sm)/1 var(--font-mark);letter-spacing:-.01em;padding-inline-start:.9em;margin-block-end:var(--space-sm);
   background:radial-gradient(circle at .24em 50%,var(--color-accent) 0 .24em,transparent .27em) no-repeat}
 
-/* IV. How we're paid: the one blue band. The gap closes. */
-.fee{color:var(--color-paper-hi);background:var(--color-blue)}
+/* IV. How we're paid: the second deep band, its light from the other side. The gap closes. */
+.fee{background:radial-gradient(110% 100% at 88% 0%,var(--color-deep-glow),transparent 60%),radial-gradient(70% 60% at 0% 100%,color-mix(in oklab,var(--color-deep-lift) 55%,transparent),transparent 70%),var(--color-deep)}
 .fee .wrap{display:flex;flex-direction:column;justify-content:center;gap:var(--section-gap-s);min-block-size:72svh;padding-block:var(--section-gap)}
 .fee-line{max-inline-size:1180px}
 .fee-line h2,.fee-line p{font:400 var(--text-fee)/1.04 var(--font-display);letter-spacing:var(--tracking-display);max-inline-size:none;text-wrap:balance}
@@ -258,7 +258,7 @@ th{text-align:start;font-weight:500}
   .why-head{grid-template-columns:7fr 5fr;align-items:end;gap:var(--space-2xl)}
   .compare-stage{padding-block:var(--space-md)}
   .glow{display:block;position:absolute;z-index:0;inset-block:-40px;inset-inline:calc(54% - 28px) calc(-1*var(--gutter));overflow:hidden;background:var(--dots) 0 0/24px 24px,var(--color-paper-2)}
-  .beam{position:absolute;inset-inline:0;top:0;block-size:clamp(88px,10vw,144px);background:linear-gradient(180deg,var(--color-blue-lift),var(--color-blue));transform:translateY(60%)}
+  .beam{position:absolute;inset-inline:0;top:0;block-size:clamp(88px,10vw,144px);background:linear-gradient(180deg,var(--color-deep-lift),var(--color-deep));transform:translateY(60%)}
   .pane{display:block;position:absolute;z-index:1;inset-block:0;inset-inline:54% 0;border-radius:var(--radius);background:var(--color-glass);
     -webkit-backdrop-filter:blur(26px) saturate(1.25);backdrop-filter:blur(26px) saturate(1.25);box-shadow:var(--shadow-glass)}
   .pane::before{content:"";position:absolute;inset:calc(-1*var(--o));pointer-events:none;background:var(--crop)}
@@ -295,7 +295,7 @@ th{text-align:start;font-weight:500}
   .contact-side{margin-inline-start:25%}
 }
 
-/* Motion. The ruler draws once; one scroll move, the blue band passing behind the glass. End states everywhere else. */
+/* Motion. The ruler draws once; one scroll move, the navy-green band passing behind the glass. End states everywhere else. */
 @media (prefers-reduced-motion:no-preference){
   html{scroll-behavior:smooth}
   .gap .ruler::before{animation:draw var(--dur-long) var(--ease-out) both;transform-origin:0 50%}
@@ -306,7 +306,7 @@ th{text-align:start;font-weight:500}
 }
 @media (prefers-reduced-motion:reduce){
   .flap{d:path("M.75 .75 L10 7.5 L19.25 .75");transition:none}
-  .btn,.btn::after{transition:none}
+  .btn,.btn-nav{transition:none}
 }
 @keyframes draw{from{transform:scaleX(0)}}
 @keyframes fade{from{opacity:0}}
