@@ -26,8 +26,7 @@
   --text-xs:0.8125rem; --text-sm:0.9375rem; --text-md:1.0625rem; --text-lead:clamp(1.125rem,0.35vw + 1rem,1.3125rem);
   --text-title:clamp(1.375rem,0.9vw + 1rem,1.875rem); --text-segment:clamp(1.75rem,1.8vw + 1rem,2.75rem);
   --text-section:clamp(2rem,2.6vw + 1rem,3.75rem); --text-display:clamp(2.5rem,4.6vw + 0.75rem,5.25rem);
-  --text-fee:clamp(2.125rem,4.4vw + 0.75rem,5.25rem); --text-contact:clamp(2.75rem,7.4vw + 0.5rem,8.5rem);
-  --text-numeral:clamp(6rem,min(19.5vw,33svh),21rem);
+  --text-numeral:clamp(3.5rem,min(9vw,16svh),8.5rem);
   --tracking-display:-0.022em; --tracking-title:-0.01em; --display-weight:400;
   --space-xs:8px; --space-sm:12px; --space-md:16px; --space-lg:24px; --space-xl:40px; --space-2xl:64px;
   --section-gap-s:clamp(64px,8.5vw,120px); --section-gap:clamp(80px,10.5vw,152px); --section-gap-l:clamp(96px,13vw,184px);
@@ -72,18 +71,13 @@ th{text-align:start;font-weight:500}
 .btn:hover{background:var(--color-ink-hover)}
 .btn:active{transform:translateY(1px)}
 .btn:focus-visible{outline:2px solid var(--color-focus);outline-offset:3px}
-.btn-nav{min-block-size:40px;padding-inline:20px;font-size:var(--text-sm);
-  transition:background-color var(--dur-short) var(--ease-out),opacity var(--dur-short) var(--ease-out),visibility 0s var(--dur-short)}
-/* site.js sets is-off while the hero action is on screen, so the first screen shows one Get in touch. */
-.btn-nav.is-off{opacity:0;visibility:hidden;transition:opacity var(--dur-short) var(--ease-out),visibility 0s}
-.btn-xl{min-block-size:60px;padding-inline:var(--space-xl);font-size:1.1875rem}
+.btn-nav{min-block-size:40px;padding-inline:20px;font-size:var(--text-sm)}
 /* The brief: a small text link under the action, nothing more. */
 .pdf{display:inline-flex;align-items:center;min-block-size:44px;margin:0;font-size:var(--text-sm);color:var(--color-mark)}
 .pdf a{color:inherit}
 .btn-ghost{background:transparent;color:var(--color-ink);box-shadow:inset 0 0 0 var(--rule-hair) var(--color-ink)}
 .btn-ghost:hover{background:var(--color-paper-2)}
-.opens a,.pdf a,.foot-links a{display:inline-flex;align-items:center;min-block-size:44px}
-.foot-links{list-style:none;margin:0;padding:0}
+.pdf a,.card-mail a{display:inline-flex;align-items:center;min-block-size:44px}
 .ctas{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-sm)}
 
 /* Nav: frosted paper, so the page slides under it. */
@@ -107,7 +101,7 @@ th{text-align:start;font-weight:500}
 
 /* Hero: the visitor's month. 30 stands where payroll falls due, 120 where the client pays. */
 .hero{position:relative;isolation:isolate}
-.hero .wrap{display:flex;flex-direction:column;justify-content:space-between;gap:var(--space-2xl);min-block-size:calc(100svh - var(--nav-h));padding-block:var(--space-xl) var(--space-2xl)}
+.hero .wrap{display:flex;flex-direction:column;gap:var(--space-2xl);padding-block:var(--space-xl) var(--space-2xl)}
 .gap{display:grid;grid-template-columns:25% 1fr}
 .due,.paid{display:contents}
 .num{font:400 var(--text-numeral)/.8 var(--font-display);letter-spacing:-0.035em;font-variant-numeric:lining-nums;justify-self:end;margin-block-end:.06em}
@@ -169,17 +163,19 @@ th{text-align:start;font-weight:500}
   background:radial-gradient(circle at .24em 50%,var(--color-accent) 0 .24em,transparent .27em) no-repeat}
 
 /* IV. How we're paid: the second deep band. */
-.fee .wrap{display:flex;flex-direction:column;justify-content:center;gap:var(--section-gap-s);min-block-size:72svh;padding-block:var(--section-gap)}
-.fee-line{max-inline-size:1180px}
-.fee-line h2,.fee-line p{font:400 var(--text-fee)/1.04 var(--font-display);letter-spacing:var(--tracking-display);max-inline-size:none;text-wrap:balance}
-.fee-line h2{margin-block-end:.5em}
+.fee .wrap{padding-block:var(--space-xl)}
+.fee-line{display:grid;gap:var(--space-xs)}
+.fee-line h2{font:600 var(--text-sm)/1.4 var(--font-body);letter-spacing:0}
+.fee-line p{font-size:var(--text-lead);line-height:1.5;max-inline-size:none}
 
 /* V. Contact. */
-.contact .wrap{display:flex;flex-direction:column;justify-content:center;gap:var(--space-2xl);min-block-size:calc(100svh - var(--nav-h));padding-block:var(--section-gap-l) var(--section-gap)}
-.contact h2{font-size:var(--text-contact);line-height:.98;letter-spacing:-0.03em;max-inline-size:13ch}
+.contact .wrap{display:grid;gap:var(--space-lg);padding-block:var(--space-2xl)}
+.contact h2{max-inline-size:20ch}
 .contact-side{display:grid;gap:var(--space-md);justify-items:start}
-.contact-side .ctas{margin-block-start:var(--space-md)}
-.git-alt,.opens{font-size:var(--text-sm)}
+.card{display:grid;gap:var(--space-md);inline-size:100%;max-inline-size:440px;padding:var(--space-lg);border:var(--rule-hair) solid var(--color-rule);border-radius:var(--radius);background:var(--color-paper-hi)}
+.card .btn{flex:1 1 0;padding-inline:var(--space-lg)}
+.card .git{flex-basis:100%}
+.git-alt,.card-mail{font-size:var(--text-sm)}
 
 .foot{border-block-start:var(--rule-hair) solid var(--color-ink);font-size:var(--text-sm)}
 .foot .wrap{display:grid;gap:var(--space-lg) var(--space-xl);padding-block:var(--space-xl) var(--space-lg)}
@@ -192,7 +188,7 @@ th{text-align:start;font-weight:500}
 .nf .num{justify-self:auto;margin:0}
 
 @media (max-width:480px){
-  :root{--text-md:1rem;--text-numeral:21.5vw}
+  :root{--text-md:1rem;--text-numeral:18vw}
   .mark{font-size:1.125rem}
   .gap .cap{grid-area:3/1/4/-1;max-inline-size:46%;margin-block-start:var(--space-sm);font-size:var(--text-xs);line-height:1.45;padding:0}
   .paid .cap{justify-self:end}
@@ -212,6 +208,9 @@ th{text-align:start;font-weight:500}
   .ledger tr,.ledger tbody th,.ledger td{display:block;inline-size:auto}
   .ledger tbody th{padding-block-end:var(--space-lg)}
   .ledger td{padding-block-start:0}
+  .compare tr{padding-block:var(--space-md)}
+  .compare tbody th{font:600 var(--text-md)/1.3 var(--font-body);letter-spacing:0;margin-block-end:var(--space-sm)}
+  .compare td:last-child{font:500 var(--text-md)/1.45 var(--font-body);letter-spacing:0;padding:var(--space-sm) var(--space-md) var(--space-md)}
 }
 
 @media (min-width:768px){
@@ -219,7 +218,8 @@ th{text-align:start;font-weight:500}
   .what-head p{grid-column:3;align-self:end}
 
   .why-head{grid-template-columns:7fr 5fr;align-items:end;gap:var(--space-2xl)}
-  .foot .wrap{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .foot .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fee-line{grid-template-columns:25% 1fr;align-items:baseline;gap:0}
   .compare{position:relative;z-index:2;table-layout:fixed}
   .compare thead{position:static;inline-size:auto;block-size:auto;overflow:visible;clip-path:none;display:table-header-group}
   .compare tr{display:table-row;padding:0;border:0}
@@ -245,7 +245,7 @@ th{text-align:start;font-weight:500}
   .steps>li{grid-template-columns:100%;grid-template-rows:subgrid;grid-row:span 4;row-gap:var(--space-xs);padding-block:var(--space-md) 0}
   .steps>li>*,.steps .when{grid-column:auto;grid-row:auto;padding:0}
   .steps>li>p:not(.when),.steps .docs-wrap p{font-size:1rem}
-  .contact-side{margin-inline-start:25%}
+  .contact .wrap{grid-template-columns:5fr 1fr 6fr;align-items:start}.contact-side{grid-column:3}
 }
 
 /* Motion. The hero ruler draws once. End states everywhere else. */
