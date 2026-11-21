@@ -143,6 +143,10 @@ th{text-align:start;font-weight:500}
 .steps{list-style:none;display:grid;margin-block-start:var(--space-2xl)}
 .steps>li{display:grid;grid-template-columns:minmax(88px,22%) minmax(0,1fr);column-gap:var(--space-md);row-gap:var(--space-xs);padding-block:var(--space-lg);border-block-start:var(--rule-hair) solid var(--color-ink)}
 .steps>li>*{grid-column:2}
+.steps .docs-wrap p{margin:0 0 var(--space-xs)}
+.steps .docs{list-style:none;padding:0;margin:0;display:grid;row-gap:var(--space-xs)}
+.steps .docs li{position:relative;padding-inline-start:var(--space-md);font-size:1rem}
+.steps .docs li::before{content:"";position:absolute;inset-inline-start:0;inset-block-start:.7em;inline-size:6px;block-size:6px;border-radius:50%;background:var(--color-ink)}
 .steps .when{grid-column:1;grid-row:1/span 3;font-weight:500;font-size:var(--text-sm);font-variant-numeric:tabular-nums;padding-block-start:.4em}
 
 /* III. Why us: the comparison. Our column sits on a plain tint between two hairlines. */
@@ -240,7 +244,7 @@ th{text-align:start;font-weight:500}
   .steps{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:auto auto auto auto;column-gap:var(--space-lg)}
   .steps>li{grid-template-columns:100%;grid-template-rows:subgrid;grid-row:span 4;row-gap:var(--space-xs);padding-block:var(--space-md) 0}
   .steps>li>*,.steps .when{grid-column:auto;grid-row:auto;padding:0}
-  .steps>li>p:not(.when){font-size:1rem}
+  .steps>li>p:not(.when),.steps .docs-wrap p{font-size:1rem}
   .contact-side{margin-inline-start:25%}
 }
 
