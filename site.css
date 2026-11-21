@@ -242,6 +242,26 @@ th{text-align:start;font-weight:500}
   .contact .wrap,.fee-line{grid-template-columns:5fr 1fr 6fr}.contact .wrap{align-items:first baseline}.fee-line{align-items:baseline}.contact-side,.fee-line .lede{grid-column:3}
 }
 
+.cap,.seg-name{text-wrap:balance}
+.compare tbody th{text-wrap:balance}
+@media (min-width:481px){.due .cap{justify-self:end;text-align:end;padding-inline-end:0}}
+@media (min-width:768px){.compare thead td{border-block-end-color:var(--color-ink)}}
+@media (min-width:768px) and (max-width:1023px){
+  .compare thead td{inline-size:22%}
+  .compare thead th:nth-child(2){inline-size:34%}
+  .compare td:nth-child(2),.compare thead th:nth-child(2){padding-inline-end:var(--space-lg)}
+  .compare td:last-child,.compare thead th:last-child{padding-inline:var(--space-lg)}
+}
+@media (min-width:1024px){
+  .steps{grid-template-rows:auto auto 1fr}
+  .steps>li{grid-row:span 3;grid-template-rows:subgrid}
+  .foot .wrap{grid-template-columns:5fr 1fr 6fr;gap:var(--space-lg)}
+  .foot address{grid-column:3}
+}
+@media (min-width:1024px) and (max-width:1199px){
+  .pitch{grid-template-columns:none}
+  .pitch-side{grid-column:auto}
+}
 /* Motion. The hero ruler draws once. End states everywhere else. */
 @media (prefers-reduced-motion:no-preference){
   html{scroll-behavior:smooth}
