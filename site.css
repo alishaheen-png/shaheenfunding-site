@@ -130,7 +130,7 @@ th{text-align:start;font-weight:500}
 .ledger tbody th,.ledger td{vertical-align:top;padding-block:var(--space-xl)}
 .ledger tbody th{inline-size:44%;padding-inline-end:var(--space-xl)}
 .seg-name{display:block;font:400 var(--text-title)/var(--lh-title) var(--font-display);letter-spacing:var(--tracking-title)}
-.ledger td strong{display:block;font:500 var(--text-lead)/var(--lh-label) var(--font-body);margin-block-end:var(--space-xs)}
+.ledger td strong{display:block;font:500 var(--text-md)/var(--lh-label) var(--font-body);margin-block-end:var(--space-xs)}
 
 /* II. How we work: four steps, each with its timing. */
 .how .wrap{padding-block:var(--section-gap) var(--section-gap-l)}
@@ -144,7 +144,7 @@ th{text-align:start;font-weight:500}
 .steps .when{grid-column:1;grid-row:1/span 3;font:var(--label);font-variant-numeric:tabular-nums;white-space:nowrap;padding-block-start:.55em}
 
 /* III. Why us: the comparison. Our column sits on a plain tint between two hairlines. */
-.why .wrap{padding-block:var(--section-gap) var(--section-gap-l)}
+.why .wrap{padding-block:var(--section-gap) var(--section-gap-s)}
 .how+.why .wrap{padding-block-start:var(--space-2xl)}
 .how+.why{border-block-start:var(--rule-hair) solid var(--color-rule)}
 .how .wrap{padding-block-end:var(--section-gap-s)}
@@ -155,8 +155,7 @@ th{text-align:start;font-weight:500}
 .compare tbody th{display:block;font:500 var(--text-lead)/var(--lh-label) var(--font-body);margin-block-end:var(--space-xs)}
 .compare td{display:block;padding-block:var(--space-xs)}
 .compare td::before{content:attr(data-l);display:block;font:var(--label);margin-block-end:var(--space-xs)}
-.compare td:last-child{margin-block-start:var(--space-sm);padding:var(--space-md) var(--space-md) var(--space-lg);border-radius:var(--radius);background:var(--color-paper-2);border:var(--rule-hair) solid var(--color-rule);
-  font-weight:500}
+.compare td:last-child{margin-block-start:var(--space-sm);padding:var(--space-md) var(--space-md) var(--space-lg);border-radius:var(--radius);background:var(--color-paper-2);border:var(--rule-hair) solid var(--color-rule)}
 /* Our side carries the clay dot from the wordmark, so the two answers can never be mistaken for each other. */
 .compare td:last-child::before{padding-inline-start:.9em;
   background:radial-gradient(circle at .24em 50%,var(--color-accent) 0 .24em,transparent .27em) no-repeat}
@@ -210,6 +209,7 @@ th{text-align:start;font-weight:500}
   .ledger td{padding-block-start:0}
   .compare tr{padding-block:var(--space-sm)}
   .compare td:last-child{margin-block-start:var(--space-xs);padding:var(--space-xs) var(--space-sm) var(--space-sm)}
+  .what-head{padding-block-end:var(--space-md)}
 }
 
 @media (min-width:768px){
@@ -226,9 +226,9 @@ th{text-align:start;font-weight:500}
   .compare td::before{content:none}
   .compare td:nth-child(2),.compare thead th:nth-child(2){padding-inline-end:var(--space-2xl)}
   .compare td:last-child,.compare thead th:last-child{margin:0;padding-inline:var(--space-xl);background:var(--color-paper-2);border:0;border-inline:var(--rule-hair) solid var(--color-rule);border-radius:0}
-  .compare thead th:last-child{border-block-start:var(--rule-hair) solid var(--color-rule)}
+  .compare thead th:last-child{border-block-start:var(--rule-hair) solid var(--color-rule);border-block-end:var(--rule-hair) solid var(--color-ink)}
   .compare td:last-child{padding-block:var(--space-lg)}
-  .compare thead .mark{min-block-size:0}
+  .compare thead .mark{min-block-size:0;font:var(--label);letter-spacing:0}
 }
 
 @media (min-width:1024px){
@@ -239,7 +239,7 @@ th{text-align:start;font-weight:500}
   .steps{grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--space-lg)}
   .steps>li{grid-template-columns:100%;align-content:start;row-gap:var(--space-xs);padding-block:var(--space-md) 0}
   .steps>li>*,.steps .when{grid-column:auto;grid-row:auto;padding:0}
-  .contact .wrap,.fee-line{grid-template-columns:5fr 1fr 6fr}.contact .wrap{align-items:start}.fee-line{align-items:baseline}.contact-side,.fee-line .lede{grid-column:3}
+  .contact .wrap,.fee-line{grid-template-columns:5fr 1fr 6fr}.contact .wrap{align-items:first baseline}.fee-line{align-items:baseline}.contact-side,.fee-line .lede{grid-column:3}
 }
 
 /* Motion. The hero ruler draws once. End states everywhere else. */
