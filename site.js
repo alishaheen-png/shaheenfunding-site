@@ -1,4 +1,4 @@
-// Builds the "Get in touch" email draft links at runtime so the address never sits in the HTML as text.
+// Points every "Get in touch" at the prefilled email draft and fills the Gmail and Outlook fallbacks.
 (function () {
   var u = 'ali', d = 'shaheenfunding.com',
     s = encodeURIComponent('Funding enquiry - <company name>'),

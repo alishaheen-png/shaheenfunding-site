@@ -1,33 +1,32 @@
 /* Hallmark · shape: kept · genre: editorial · theme: Studio (deal 1/3, seed redesign-shaheenfunding-com-uae-4113·bb85f7bc·2026-11-20·r0) · redesign: restyle · copy: verbatim
- * hero: kept · nav: kept · footer: kept · imagery: none · signature: the 30 and 120 standing on a ruler with the gap between them drawn in orange
+ * hero: kept · nav: kept · footer: kept · imagery: none · signature: the 30 and 120 standing on a ruler with the gap between them drawn as one orange line
  * axes: light/roman-serif/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
-/* Hallmark · pre-emit critique: P4 H5 E4 S5 R4 V4 · weakest: P, the theme asks for one signal and the owner asked for a third colour; the third colour is a deep navy-green on the two dark bands and the light behind the glass */
-/* Hallmark · waive 81 · one ground, the proof grid and navy-green band under the frosted comparison pane · the owner asked for the comparison on frosted glass, and glass needs something behind it */
+/* Hallmark · pre-emit critique: P4 H5 E4 S5 R4 V4 · weakest: P, the theme asks for one signal and the owner asked for a third colour; the third colour is a flat deep navy-green on the two dark bands */
 /* Hallmark · dismissed 58 · every word is the owner's and locked to the product brief PDF; the ledger and process screens carry their full sentences */
-/* shaheenfunding.com. One ruler (payroll due at 30, clients pay at 120) runs through the page.
+/* shaheenfunding.com. One ruler (payroll due at 30, clients pay at 120) sits in the hero.
    Every colour, face, size and duration is a token in :root; nothing below it holds a raw value. */
 
 @font-face{font-family:"Hedvig Letters Serif";src:url(/fonts/hedvig-letters-serif.woff2) format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"Geist";src:url(/fonts/geist.woff2) format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"IBM Plex Sans";src:url(/fonts/plex-400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"IBM Plex Sans";src:url(/fonts/plex-500.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"IBM Plex Sans";src:url(/fonts/plex-600.woff2) format("woff2");font-weight:600;font-display:swap}
 @font-face{font-family:"Nunito";src:url(/fonts/nunito-900-mark.woff2) format("woff2");font-weight:900;font-display:swap}
 /* Metric-matched fallbacks so the web fonts swap in without moving the layout. */
 @font-face{font-family:"Display fb";src:local("Georgia");size-adjust:102.5%;ascent-override:99.5%;descent-override:31.2%;line-gap-override:0%}
-@font-face{font-family:"Body fb";src:local("Arial"),local("ArialMT");size-adjust:104.2%;ascent-override:96.5%;descent-override:28.3%;line-gap-override:0%}
+@font-face{font-family:"Body fb";src:local("Arial"),local("ArialMT");size-adjust:100%;ascent-override:102.5%;descent-override:27.5%;line-gap-override:0%}
 
 :root{
   color-scheme:light;
   --color-paper:oklch(97.2% 0.006 190); --color-paper-2:oklch(94% 0.009 190); --color-paper-3:oklch(90.5% 0.011 190); --color-paper-hi:oklch(99% 0.004 190);
   --color-ink:oklch(16% 0.022 185); --color-rule:oklch(84% 0.010 190);
-  --color-accent:#D97757; --color-accent-press:#CC6947; --color-accent-hi:color-mix(in oklab,#D97757 72%,#FFE9DC); --color-accent-lo:#BF5E3E;
-  --color-accent-shade:color-mix(in oklab,#8A3A20 35%,transparent); --color-accent-glow:color-mix(in oklab,#D97757 75%,transparent);
-  --color-gloss:color-mix(in oklab,#FFFFFF 55%,transparent); --color-gloss-edge:color-mix(in oklab,#FFFFFF 60%,transparent); --color-btn-drop:color-mix(in oklab,#0F1E1C 18%,transparent); --color-accent-ink:oklch(16% 0.022 185); --color-focus:oklch(52% 0.15 48);
-  --color-deep:#0F1E1C; --color-deep-lift:#243532; --color-deep-glow:color-mix(in oklab,#2F4A44 70%,transparent);
-  --color-dot:color-mix(in oklab,var(--color-ink) 20%,transparent); --color-mark:color-mix(in oklab,var(--color-ink) 72%,transparent);
+  --color-accent:#D97757; --color-ink-hover:color-mix(in oklab,var(--color-ink) 82%,var(--color-paper-hi)); --color-btn-hair:color-mix(in oklab,var(--color-ink) 16%,transparent);
+  --color-focus:var(--color-ink); --color-select:color-mix(in oklab,var(--color-ink) 16%,transparent);
+  --color-deep:#0F1E1C;
+  --color-mark:color-mix(in oklab,var(--color-ink) 72%,transparent);
   --color-rule-dark:color-mix(in oklab,var(--color-paper-hi) 26%,transparent);
-  --color-glass:color-mix(in oklab,var(--color-paper-hi) 58%,transparent); --color-glass-edge:color-mix(in oklab,var(--color-paper-hi) 80%,transparent);
   --color-nav:color-mix(in oklab,var(--color-paper) 74%,transparent);
   --font-display:"Hedvig Letters Serif","Display fb",ui-serif,Georgia,serif;
-  --font-body:"Geist","Body fb",ui-sans-serif,system-ui,sans-serif;
+  --font-body:"IBM Plex Sans","Body fb",ui-sans-serif,system-ui,sans-serif;
   --font-mark:"Nunito","Arial Black",sans-serif;
   --text-xs:0.8125rem; --text-sm:0.9375rem; --text-md:1.0625rem; --text-lead:clamp(1.125rem,0.35vw + 1rem,1.3125rem);
   --text-title:clamp(1.375rem,0.9vw + 1rem,1.875rem); --text-segment:clamp(1.75rem,1.8vw + 1rem,2.75rem);
@@ -41,33 +40,24 @@
   --radius:3px; --rule-hair:1px;
   --ease-out:cubic-bezier(0.16,1,0.3,1); --ease-in-out:cubic-bezier(0.65,0,0.35,1);
   --dur-short:220ms; --dur-long:420ms;
-  --hatch:repeating-linear-gradient(135deg,var(--color-accent) 0 1.5px,transparent 1.5px 7px);
-  --dots:radial-gradient(circle at 1px 1px,var(--color-dot) 1px,transparent 1.4px);
-  --shadow-sheet:1px 2px 0 color-mix(in oklab,var(--color-ink) 7%,transparent),10px 18px 36px -14px color-mix(in oklab,var(--color-ink) 32%,transparent);
-  --shadow-glass:inset 0 0 0 1px var(--color-glass-edge),inset 0 1px 0 var(--color-paper-hi),0 36px 56px -32px color-mix(in oklab,var(--color-ink) 46%,transparent),0 2px 10px color-mix(in oklab,var(--color-ink) 10%,transparent);
-  /* Crop marks: eight ticks set off the corners of a printed piece. */
-  --l:8px; --o:12px;
-  --crop:linear-gradient(var(--color-mark),var(--color-mark)) 0 var(--o)/var(--l) 1px no-repeat,linear-gradient(var(--color-mark),var(--color-mark)) var(--o) 0/1px var(--l) no-repeat,
-    linear-gradient(var(--color-mark),var(--color-mark)) 100% var(--o)/var(--l) 1px no-repeat,linear-gradient(var(--color-mark),var(--color-mark)) calc(100% - var(--o)) 0/1px var(--l) no-repeat,
-    linear-gradient(var(--color-mark),var(--color-mark)) 0 calc(100% - var(--o))/var(--l) 1px no-repeat,linear-gradient(var(--color-mark),var(--color-mark)) var(--o) 100%/1px var(--l) no-repeat,
-    linear-gradient(var(--color-mark),var(--color-mark)) 100% calc(100% - var(--o))/var(--l) 1px no-repeat,linear-gradient(var(--color-mark),var(--color-mark)) calc(100% - var(--o)) 100%/1px var(--l) no-repeat;
 }
 
 *,*::before,*::after{box-sizing:border-box}
 [hidden]{display:none!important}
 html,body{overflow-x:clip}
 html{scroll-padding-top:calc(var(--nav-h) + 16px);-webkit-text-size-adjust:100%;scrollbar-color:var(--color-mark) var(--color-paper)}
-body{margin:0;background:var(--color-paper);color:var(--color-ink);font:400 var(--text-md)/1.55 var(--font-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;caret-color:var(--color-accent)}
+body{margin:0;background:var(--color-paper);color:var(--color-ink);font:400 var(--text-md)/1.55 var(--font-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;caret-color:var(--color-ink)}
 h1,h2,h3,p,ol,ul,table{margin:0;padding:0}
+address{font-style:normal;max-inline-size:60ch}
 h1,h2,h3{font-family:var(--font-display);font-weight:var(--display-weight);font-synthesis:none;font-optical-sizing:auto;letter-spacing:var(--tracking-display);overflow-wrap:break-word;min-width:0;text-wrap:balance}
 h1{font-size:var(--text-display);line-height:1.02}
 h2{font-size:var(--text-section);line-height:1.04}
 h3{font-size:var(--text-title);line-height:1.12;letter-spacing:var(--tracking-title)}
 p{max-inline-size:60ch;text-wrap:pretty}
 a{color:inherit;text-underline-offset:.18em;text-decoration-thickness:1px}
-a:hover{text-decoration-color:var(--color-accent);text-decoration-thickness:2px}
+a:hover{text-decoration-thickness:2px}
 :focus-visible{outline:2px solid var(--color-focus);outline-offset:3px}
-::selection{background:color-mix(in oklab,var(--color-accent) 30%,transparent);color:var(--color-ink)}
+::selection{background:var(--color-select);color:var(--color-ink)}
 table{border-collapse:collapse;inline-size:100%;text-align:start}
 th{text-align:start;font-weight:500}
 .wrap{inline-size:100%;max-inline-size:var(--container);margin-inline:auto;padding-inline:var(--gutter)}
@@ -79,18 +69,16 @@ th{text-align:start;font-weight:500}
 .mark{display:inline-flex;align-items:center;gap:.42em;min-block-size:44px;font:900 1.25rem/1 var(--font-mark);letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
 .mark i{inline-size:.48em;block-size:.48em;border-radius:50%;background:var(--color-accent)}
 
-/* The one action: a glossy clay pill. Lit from above (sheen + inner top light), seated by a warm shadow; lifts on hover. */
-.btn{position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;min-block-size:52px;padding-inline:32px;
-  border:0;border-radius:999px;color:var(--color-accent-ink);font:500 1.0625rem/1 var(--font-body);text-decoration:none;white-space:nowrap;
-  background:linear-gradient(180deg,var(--color-accent-hi) 0%,var(--color-accent) 52%,var(--color-accent-lo) 100%);
-  box-shadow:inset 0 1px 0 var(--color-gloss-edge),inset 0 -2px 3px var(--color-accent-shade),0 1px 2px var(--color-btn-drop),0 10px 22px -10px var(--color-accent-glow);
-  transition:transform var(--dur-short) var(--ease-out),box-shadow var(--dur-short) var(--ease-out)}
-.btn::before{content:"";position:absolute;z-index:-1;inset:2px 10px 50% 10px;border-radius:999px;background:linear-gradient(180deg,var(--color-gloss) 0%,transparent 100%);pointer-events:none}
-.btn:hover{transform:translateY(-1px);box-shadow:inset 0 1px 0 var(--color-gloss-edge),inset 0 -2px 3px var(--color-accent-shade),0 2px 3px var(--color-btn-drop),0 16px 28px -12px var(--color-accent-glow)}
-.btn:active{transform:translateY(1px);box-shadow:inset 0 1px 0 var(--color-gloss-edge),inset 0 -1px 2px var(--color-accent-shade),0 1px 1px var(--color-btn-drop)}
-.btn:focus-visible{outline:2px solid var(--color-focus);outline-offset:3px;transition:none}
+/* The one action: a flat ink pill. No gloss, no glow; a hairline seats it. */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-block-size:52px;padding-inline:32px;
+  border:0;border-radius:999px;color:var(--color-paper-hi);font:500 1.0625rem/1 var(--font-body);text-decoration:none;white-space:nowrap;
+  background:var(--color-ink);box-shadow:0 1px 0 var(--color-btn-hair);
+  transition:background-color var(--dur-short) var(--ease-out)}
+.btn:hover{background:var(--color-ink-hover)}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:2px solid var(--color-focus);outline-offset:3px}
 .btn-nav{min-block-size:40px;padding-inline:20px;font-size:var(--text-sm);
-  transition:transform var(--dur-short) var(--ease-out),box-shadow var(--dur-short) var(--ease-out),opacity var(--dur-short) var(--ease-out),visibility 0s var(--dur-short)}
+  transition:background-color var(--dur-short) var(--ease-out),opacity var(--dur-short) var(--ease-out),visibility 0s var(--dur-short)}
 /* site.js sets is-off while the hero action is on screen, so the first screen shows one Get in touch. */
 .btn-nav.is-off{opacity:0;visibility:hidden;transition:opacity var(--dur-short) var(--ease-out),visibility 0s}
 .btn-xl{min-block-size:60px;padding-inline:var(--space-xl);font-size:1.1875rem}
@@ -104,29 +92,28 @@ th{text-align:start;font-weight:500}
 .nav .wrap{display:flex;align-items:center;gap:var(--space-xl);block-size:var(--nav-h)}
 .nav nav{display:none;gap:var(--space-xl);margin-inline-start:auto;font-size:var(--text-sm);font-weight:500}
 .nav nav a{display:inline-flex;align-items:center;min-block-size:44px;text-decoration:none}
-.nav nav a:hover{text-decoration:underline;text-decoration-color:var(--color-accent)}
+.nav nav a:hover{text-decoration:underline}
 .nav .btn{margin-inline-start:auto}
 
-/* The ruler. 0 to 120 days; the gap between 30 and 120 is drawn in orange, as a redline. */
-.ruler{--hatch-h:12px;position:relative;display:block;block-size:calc(var(--hatch-h) + 40px)}
-.ruler::before{content:"";position:absolute;inset-inline:0;top:var(--hatch-h);border-block-start:var(--rule-hair) solid currentColor}
-.ruler .hatch{position:absolute;inset-inline:25% 0;top:0;block-size:var(--hatch-h);background:var(--hatch)}
-.tick{position:absolute;top:var(--hatch-h);inline-size:1px;block-size:8px;background:currentColor}
+/* The hero ruler. 0 to 120 days; the gap between 30 and 120 is one solid orange line. */
+.ruler{--ruler-h:12px;position:relative;display:block;block-size:calc(var(--ruler-h) + 40px)}
+.ruler::before{content:"";position:absolute;inset-inline:0;top:var(--ruler-h);border-block-start:var(--rule-hair) solid currentColor}
+.ruler .bar{position:absolute;inset-inline:25% 0;top:calc(var(--ruler-h) - 3px);block-size:4px;background:var(--color-accent)}
+.tick{position:absolute;top:var(--ruler-h);inline-size:1px;block-size:8px;background:currentColor}
 .t0{inset-inline-start:0}.t30{inset-inline-start:25%;block-size:16px}.t60{inset-inline-start:50%}.t90{inset-inline-start:75%}.t120{inset-inline-end:0;block-size:16px}
 .ruler b,.axis b{position:absolute;font:500 var(--text-sm)/1 var(--font-body);font-variant-numeric:tabular-nums lining-nums}
-.ruler b{top:calc(var(--hatch-h) + 16px);translate:-50%}
+.ruler b{top:calc(var(--ruler-h) + 16px);translate:-50%}
 .n30{inset-inline-start:25%}.n60{inset-inline-start:50%}.n90{inset-inline-start:75%}
 .ruler .n120{inset-inline:auto 0;translate:0}
 
-/* Hero: the visitor's month, on proof paper. 30 stands where payroll falls due, 120 where the client pays. */
+/* Hero: the visitor's month. 30 stands where payroll falls due, 120 where the client pays. */
 .hero{position:relative;isolation:isolate}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--dots) 0 0/24px 24px;-webkit-mask-image:linear-gradient(var(--color-ink) 45%,transparent 92%);mask-image:linear-gradient(var(--color-ink) 45%,transparent 92%)}
 .hero .wrap{display:flex;flex-direction:column;justify-content:space-between;gap:var(--space-2xl);min-block-size:calc(100svh - var(--nav-h));padding-block:var(--space-xl) var(--space-2xl)}
 .gap{display:grid;grid-template-columns:25% 1fr}
 .due,.paid{display:contents}
 .num{font:400 var(--text-numeral)/.8 var(--font-display);letter-spacing:-0.035em;font-variant-numeric:lining-nums;justify-self:end;margin-block-end:.06em}
 .due .num{grid-area:1/1}.paid .num{grid-area:1/2}
-.gap .ruler{grid-area:2/1/3/-1;--hatch-h:clamp(14px,2vw,28px)}
+.gap .ruler{grid-area:2/1/3/-1;--ruler-h:clamp(8px,1vw,12px)}
 .cap{font-size:var(--text-sm);line-height:1.4;font-weight:500;max-inline-size:27ch}
 .due .cap{grid-area:3/1;padding-inline-end:var(--space-md)}
 .paid .cap{grid-area:3/2;justify-self:end;text-align:end}
@@ -134,8 +121,8 @@ th{text-align:start;font-weight:500}
 .lede{font-size:var(--text-lead);line-height:1.5}
 .pitch-side{display:grid;gap:var(--space-lg)}
 
-/* The dark navy-green bands, lit from one corner so they read deep, not flat. */
-.night{color:var(--color-paper-hi);background:radial-gradient(120% 90% at 12% 0%,var(--color-deep-glow),transparent 62%),radial-gradient(80% 70% at 100% 100%,color-mix(in oklab,var(--color-deep-lift) 60%,transparent),transparent 70%),var(--color-deep)}
+/* The dark navy-green bands: one flat colour, so every line on them clears 4.5:1. */
+.night{color:var(--color-paper-hi);background:var(--color-deep)}
 
 /* I. Who we work with / what we arrange: one ledger. */
 .who .wrap{padding-block:var(--section-gap-l) var(--section-gap-s)}
@@ -148,7 +135,6 @@ th{text-align:start;font-weight:500}
 .ledger tbody th,.ledger td{vertical-align:top;padding-block:var(--space-xl)}
 .ledger tbody th{inline-size:44%;padding-inline-end:var(--space-xl)}
 .seg-name{display:block;font:400 var(--text-segment)/1.06 var(--font-display);letter-spacing:var(--tracking-display)}
-.ruler.mini{max-inline-size:420px;margin-block-start:var(--space-lg);block-size:calc(var(--hatch-h) + 16px)}
 .ledger td strong{display:block;font-weight:500;font-size:1.3125rem;line-height:1.3;margin-block-end:var(--space-xs)}
 .ledger td p{max-inline-size:54ch}
 
@@ -159,7 +145,7 @@ th{text-align:start;font-weight:500}
 .axis::before{content:"";position:absolute;inset-inline:0 8%;top:46px;border-block-start:var(--rule-hair) solid var(--color-ink)}
 .axis::after{content:"";position:absolute;inset-inline:92% 0;top:46px;border-block-start:var(--rule-hair) dashed var(--color-ink)}
 .segs{position:absolute;inset-inline:0 8%;top:37px;block-size:9px}
-.seg{position:absolute;top:0;block-size:9px;background:var(--color-accent);border:var(--rule-hair) solid var(--color-ink);border-block-end:0}
+.seg{position:absolute;top:0;block-size:9px;background:var(--color-ink);border:var(--rule-hair) solid var(--color-ink);border-block-end:0}
 .s1{inset-inline-start:0;inline-size:calc(3.333% - 3px)}
 .s2{inset-inline-start:3.333%;inline-size:calc(6.667% - 3px)}
 .s3{inset-inline-start:10%;inline-size:calc(13.333% - 3px)}
@@ -175,37 +161,28 @@ th{text-align:start;font-weight:500}
 .steps>li{display:grid;grid-template-columns:minmax(88px,22%) minmax(0,1fr);column-gap:var(--space-md);row-gap:var(--space-xs);padding-block:var(--space-lg);border-block-start:var(--rule-hair) solid var(--color-ink)}
 .steps>li>*{grid-column:2}
 .steps .when{grid-column:1;grid-row:1/span 3;font-weight:500;font-size:var(--text-sm);font-variant-numeric:tabular-nums;padding-block-start:.4em}
-.docs{grid-column:1/-1!important;list-style:none;display:flex;gap:var(--space-lg) var(--space-md);margin-block-start:var(--space-lg);font-size:var(--text-xs);line-height:1.3;font-weight:500}
-.docs li{flex:1 1 0;min-inline-size:0;max-inline-size:112px}
-.docs .nda{box-sizing:content-box;padding-inline-end:var(--space-md);border-inline-end:var(--rule-hair) solid var(--color-ink)}
-.sheet{position:relative;display:block;aspect-ratio:1/1.414;margin-block-end:var(--space-md);padding:22% 14% 40%;border-radius:var(--radius);
-  background:repeating-linear-gradient(180deg,var(--color-rule) 0 1px,transparent 1px 16.6%) content-box,var(--color-paper-hi);box-shadow:var(--shadow-sheet)}
 
-/* III. Why us: the comparison. On wide screens our column sits on a pane of frosted glass
-   laid over the proof grid, with one navy-green band behind it. */
+/* III. Why us: the comparison. Our column sits on a plain tint between two hairlines. */
 .why .wrap{padding-block:var(--section-gap) var(--section-gap-l)}
 .why-head{display:grid;gap:var(--space-lg);margin-block-end:var(--section-gap-s)}
 .why-head p{font-size:var(--text-lead)}
 .compare-stage{position:relative;isolation:isolate}
-.glow,.pane{display:none}
 .compare thead{position:absolute;inline-size:1px;block-size:1px;overflow:hidden;clip-path:inset(50%)}
 .compare tr{display:block;padding-block:var(--space-lg);border-block-start:var(--rule-hair) solid var(--color-ink)}
 .compare tbody th{display:block;font:400 var(--text-title)/1.12 var(--font-display);letter-spacing:var(--tracking-title);margin-block-end:var(--space-md)}
 .compare td{display:block;padding-block:var(--space-xs)}
 .compare td::before{content:attr(data-l);display:block;font:600 var(--text-xs)/1.3 var(--font-body);letter-spacing:0;margin-block-end:var(--space-xs)}
-.compare td:last-child{margin-block-start:var(--space-sm);padding:var(--space-md) var(--space-md) var(--space-lg);border-radius:var(--radius);background:var(--color-paper-hi);box-shadow:var(--shadow-sheet);
+.compare td:last-child{margin-block-start:var(--space-sm);padding:var(--space-md) var(--space-md) var(--space-lg);border-radius:var(--radius);background:var(--color-paper-2);border:var(--rule-hair) solid var(--color-rule);
   font:400 var(--text-title)/1.15 var(--font-display);letter-spacing:var(--tracking-title)}
 /* Our side carries the wordmark, so the two answers can never be mistaken for each other. */
 .compare td:last-child::before{font:900 var(--text-sm)/1 var(--font-mark);letter-spacing:-.01em;padding-inline-start:.9em;margin-block-end:var(--space-sm);
   background:radial-gradient(circle at .24em 50%,var(--color-accent) 0 .24em,transparent .27em) no-repeat}
 
-/* IV. How we're paid: the second deep band, its light from the other side. The gap closes. */
-.fee{background:radial-gradient(110% 100% at 88% 0%,var(--color-deep-glow),transparent 60%),radial-gradient(70% 60% at 0% 100%,color-mix(in oklab,var(--color-deep-lift) 55%,transparent),transparent 70%),var(--color-deep)}
+/* IV. How we're paid: the second deep band. */
 .fee .wrap{display:flex;flex-direction:column;justify-content:center;gap:var(--section-gap-s);min-block-size:72svh;padding-block:var(--section-gap)}
 .fee-line{max-inline-size:1180px}
 .fee-line h2,.fee-line p{font:400 var(--text-fee)/1.04 var(--font-display);letter-spacing:var(--tracking-display);max-inline-size:none;text-wrap:balance}
-.fee-line h2{margin-block-end:.18em}
-.closed .bar{position:absolute;inset-inline:25% 0;top:2px;block-size:10px;background:var(--color-accent)}
+.fee-line h2{margin-block-end:.5em}
 
 /* V. Contact. */
 .contact .wrap{display:flex;flex-direction:column;justify-content:center;gap:var(--space-2xl);min-block-size:calc(100svh - var(--nav-h));padding-block:var(--section-gap-l) var(--section-gap)}
@@ -214,11 +191,11 @@ th{text-align:start;font-weight:500}
 .contact-side .ctas{margin-block-start:var(--space-md)}
 .git-alt,.opens{font-size:var(--text-sm)}
 
-.foot{position:relative;isolation:isolate;border-block-start:var(--rule-hair) solid var(--color-ink);font-size:var(--text-sm)}
-.foot::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--dots) 0 0/24px 24px}
-.foot .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-xs) var(--space-xl);padding-block:var(--space-lg)}
-.foot p{max-inline-size:none}
-.foot p:last-child{margin-inline-start:auto}
+.foot{border-block-start:var(--rule-hair) solid var(--color-ink);font-size:var(--text-sm)}
+.foot .wrap{display:grid;gap:var(--space-lg) var(--space-xl);padding-block:var(--space-xl) var(--space-lg)}
+.foot p,.foot address{max-inline-size:none;line-height:1.7}
+.foot .mark{min-block-size:0;margin-block-end:var(--space-sm)}
+.foot .legal{grid-column:1/-1;padding-block-start:var(--space-md);border-block-start:var(--rule-hair) solid var(--color-rule);color:var(--color-mark)}
 
 /* 404 */
 .nf .wrap{display:flex;flex-direction:column;justify-content:center;gap:var(--space-xl);min-block-size:calc(100svh - var(--nav-h));padding-block:var(--space-2xl)}
@@ -230,11 +207,7 @@ th{text-align:start;font-weight:500}
   .gap .cap{grid-area:3/1/4/-1;max-inline-size:46%;margin-block-start:var(--space-sm);font-size:var(--text-xs);line-height:1.45;padding:0}
   .paid .cap{justify-self:end}
   .gap .ruler b{display:none}
-  .gap .ruler{block-size:calc(var(--hatch-h) + 20px)}
-  .docs{font-size:0;gap:var(--space-xs)}
-  .docs .nda{padding-inline-end:var(--space-xs)}
-  .sheet{margin-block-end:0}
-  .foot p:last-child{margin-inline-start:0}
+  .gap .ruler{block-size:calc(var(--ruler-h) + 20px)}
   .ctas{inline-size:100%}
 }
 
@@ -255,15 +228,9 @@ th{text-align:start;font-weight:500}
 @media (min-width:768px){
   .what-head{grid-template-columns:5fr 1fr 5fr}
   .what-head p{grid-column:3;align-self:end}
-  .docs{font-size:var(--text-sm)}
 
   .why-head{grid-template-columns:7fr 5fr;align-items:end;gap:var(--space-2xl)}
-  .compare-stage{padding-block:var(--space-md)}
-  .glow{display:block;position:absolute;z-index:0;inset-block:-40px;inset-inline:calc(54% - 28px) calc(-1*var(--gutter));overflow:hidden;background:var(--dots) 0 0/24px 24px,var(--color-paper-2)}
-  .beam{position:absolute;inset-inline:0;top:0;block-size:clamp(88px,10vw,144px);background:linear-gradient(180deg,var(--color-deep-lift),var(--color-deep));transform:translateY(60%)}
-  .pane{display:block;position:absolute;z-index:1;inset-block:0;inset-inline:54% 0;border-radius:var(--radius);background:var(--color-glass);
-    -webkit-backdrop-filter:blur(26px) saturate(1.25);backdrop-filter:blur(26px) saturate(1.25);box-shadow:var(--shadow-glass)}
-  .pane::before{content:"";position:absolute;inset:calc(-1*var(--o));pointer-events:none;background:var(--crop)}
+  .foot .wrap{grid-template-columns:repeat(3,minmax(0,1fr))}
   .compare{position:relative;z-index:2;table-layout:fixed}
   .compare thead{position:static;inline-size:auto;block-size:auto;overflow:visible;clip-path:none;display:table-header-group}
   .compare tr{display:table-row;padding:0;border:0}
@@ -271,12 +238,12 @@ th{text-align:start;font-weight:500}
   .compare thead th:nth-child(2){inline-size:29%}
   .compare thead th{font-size:var(--text-md);padding-block:var(--space-lg);border-block-end:var(--rule-hair) solid var(--color-ink)}
   .compare tbody th,.compare td{display:table-cell;vertical-align:top;padding-block:var(--space-lg);border-block-end:var(--rule-hair) solid var(--color-rule)}
-  .compare tbody tr:last-child>*{border-block-end:0}
   .compare tbody th{font:500 var(--text-md)/1.45 var(--font-body);letter-spacing:0;margin:0;padding-inline-end:var(--space-lg)}
   .compare td::before{content:none}
   .compare td:nth-child(2),.compare thead th:nth-child(2){padding-inline-end:var(--space-2xl)}
-  .compare td:last-child,.compare thead th:last-child{margin:0;padding-inline:var(--space-xl);background:none;box-shadow:none;border-radius:0}
-  .compare td:last-child{padding-block:var(--space-lg);font-size:1.4375rem;line-height:1.2}
+  .compare td:last-child,.compare thead th:last-child{margin:0;padding-inline:var(--space-xl);background:var(--color-paper-2);border:0;border-inline:var(--rule-hair) solid var(--color-rule);border-radius:0}
+  .compare thead th:last-child{border-block-start:var(--rule-hair) solid var(--color-rule)}
+  .compare td:last-child{padding-block:var(--space-lg);font-size:1.4375rem;line-height:1.3}
   .compare thead .mark{min-block-size:0;font-size:1.25rem}
 }
 
@@ -290,26 +257,18 @@ th{text-align:start;font-weight:500}
   .steps>li{grid-template-columns:100%;grid-template-rows:subgrid;grid-row:span 4;row-gap:var(--space-xs);padding-block:var(--space-md) 0}
   .steps>li>*,.steps .when{grid-column:auto;grid-row:auto;padding:0}
   .steps>li>p:not(.when){font-size:1rem}
-  .docs{gap:var(--space-xl);inline-size:calc(400% + 3*var(--space-lg));margin-block-start:var(--space-2xl)}
-  .docs li{flex:none;inline-size:112px}
-  .docs .nda{padding-inline-end:var(--space-xl)}
-  .sheet::before{content:"";position:absolute;inset:calc(-1*var(--o));pointer-events:none;background:var(--crop)}
   .contact-side{margin-inline-start:25%}
 }
 
-/* Motion. The ruler draws once; one scroll move, the navy-green band passing behind the glass. End states everywhere else. */
+/* Motion. The hero ruler draws once. End states everywhere else. */
 @media (prefers-reduced-motion:no-preference){
   html{scroll-behavior:smooth}
   .gap .ruler::before{animation:draw var(--dur-long) var(--ease-out) both;transform-origin:0 50%}
-  .gap .hatch{animation:fade var(--dur-long) var(--ease-out) var(--dur-short) both}
-  @supports (animation-timeline:view()){
-    .beam{animation:pass linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
-  }
+  .gap .bar{animation:fade var(--dur-long) var(--ease-out) var(--dur-short) both}
 }
 @media (prefers-reduced-motion:reduce){
   .btn,.btn-nav{transition:none}
-  .btn:hover,.btn:active{transform:none}
+  .btn:active{transform:none}
 }
 @keyframes draw{from{transform:scaleX(0)}}
 @keyframes fade{from{opacity:0}}
-@keyframes pass{from{transform:translateY(-60%)}to{transform:translateY(520%)}}
