@@ -2,7 +2,7 @@
 (function () {
   var u = 'ali', d = 'shaheenfunding.com',
     s = encodeURIComponent('Funding enquiry - <company name>'),
-    b = encodeURIComponent('Hello,\r\n\r\nCompany: \r\nYear the company was founded: \r\nAverage monthly revenue (AED): \r\nWhat we need funding for: \r\nRough amount (AED): \r\nBest number to reach me: \r\n'),
+    b = encodeURIComponent('Hello,\r\n\r\nCompany: \r\nDate the company was founded: \r\nAverage monthly revenue (AED): \r\nWhat we need funding for: \r\nRough amount (AED): \r\nBest number to reach me: \r\n'),
     h = 'mailto:' + u + '@' + d + '?subject=' + s + '&body=' + b,
     t = encodeURIComponent(u + '@' + d),
     gm = 'https://mail.google.com/mail/?view=cm&to=' + t + '&su=' + s + '&body=' + b,
