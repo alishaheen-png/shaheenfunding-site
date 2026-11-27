@@ -26,3 +26,25 @@
   }, { rootMargin: '0px 0px -10% 0px' });
   document.querySelectorAll('[data-r]').forEach(function (el) { io.observe(el); });
 })();
+
+// The four steps travel sideways while their section is pinned. Skipped for reduced motion and short screens.
+(function () {
+  var how = document.querySelector('.home .how'), track = how && how.querySelector('.steps');
+  if (!track || !window.matchMedia('(prefers-reduced-motion: no-preference) and (min-height: 600px)').matches) { return; }
+  how.classList.add('pin');
+  var wrap = how.querySelector('.wrap'), travel = 0, queued = false;
+  function move() {
+    queued = false;
+    var p = travel ? Math.min(1, Math.max(0, (wrap.offsetTop - how.offsetTop) / travel)) : 0;
+    track.style.transform = 'translate3d(' + (-p * travel) + 'px,0,0)';
+  }
+  function size() {
+    travel = Math.max(0, track.scrollWidth - track.clientWidth);
+    how.style.blockSize = (wrap.offsetHeight + travel) + 'px';
+    move();
+  }
+  window.addEventListener('scroll', function () { if (!queued) { queued = true; requestAnimationFrame(move); } }, { passive: true });
+  window.addEventListener('resize', size);
+  window.addEventListener('load', size);
+  size();
+})();
