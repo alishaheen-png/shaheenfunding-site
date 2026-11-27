@@ -16,3 +16,13 @@
   document.querySelectorAll('a.git-gm').forEach(function (a) { a.href = gm; });
   document.querySelectorAll('a.git-ol').forEach(function (a) { a.href = ol; });
 })();
+
+// One reveal as blocks scroll in. Content stays visible without scripting.
+(function () {
+  if (!('IntersectionObserver' in window)) { return; }
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -10% 0px' });
+  document.querySelectorAll('[data-r]').forEach(function (el) { io.observe(el); });
+})();
