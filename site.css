@@ -22,7 +22,7 @@
   --color-sand:oklch(80% 0.062 82); --color-teal:oklch(62% 0.07 185);
   --glass:color-mix(in oklab,var(--color-paper-hi) 34%,transparent); --glass-hi:color-mix(in oklab,var(--color-paper-hi) 66%,transparent);
   --glass-edge:color-mix(in oklab,var(--color-paper-hi) 85%,transparent);
-  --glass-night:color-mix(in oklab,var(--color-paper-hi) 7%,transparent); --glass-night-edge:color-mix(in oklab,var(--color-paper-hi) 18%,transparent);
+  --glass-night:color-mix(in oklab,color-mix(in oklab,var(--color-paper-hi) 9%,var(--color-deep)) 86%,transparent); --night-veil:color-mix(in oklab,var(--color-deep) 62%,transparent); --glass-night-edge:color-mix(in oklab,var(--color-paper-hi) 18%,transparent);
   --orb-warm:color-mix(in oklab,var(--color-accent) 46%,transparent); --orb-cool:color-mix(in oklab,var(--color-teal) 42%,transparent);
   --shadow-soft:0 1px 1px color-mix(in oklab,var(--color-ink) 5%,transparent),0 12px 40px -12px color-mix(in oklab,var(--color-ink) 22%,transparent);
   --frost:blur(14px) saturate(1.6);
@@ -341,7 +341,7 @@ th{text-align:start;font-weight:500}
 .home .gap{padding:var(--space-lg) var(--space-lg) var(--space-md);border-radius:var(--radius-lg);background:var(--color-paper-2)}
 
 /* Sand lines run under every dark band and under the comparison. */
-.night{background:var(--color-deep) url(/lines.svg) center top/max(100%,1400px) auto repeat-y}
+.night{background:linear-gradient(var(--night-veil),var(--night-veil)),url(/lines.svg) center top/max(100%,1400px) auto repeat-y,var(--color-deep)}
 
 /* What we arrange: three frosted cards on the dark band. */
 .home .ledger tbody tr{border:var(--rule-hair) solid var(--glass-night-edge);border-radius:var(--radius-lg);background:var(--glass-night);-webkit-backdrop-filter:var(--frost);backdrop-filter:var(--frost)}
