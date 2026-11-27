@@ -430,3 +430,23 @@ th{text-align:start;font-weight:500}
 .home .how.pin .steps .when{font:var(--label)}
 .home .how.pin .steps>li:not(:last-child)::after{content:"";position:absolute;inset-inline-start:100%;top:calc(var(--space-xl) + 12px);inline-size:var(--space-lg);border-block-start:2px solid var(--color-accent)}
 
+
+/* Comparison, second pass: the two sides must read apart at a glance. Our side is the deep green; going alone is the muted one. */
+.home .compare td:nth-child(2)::before,.home .compare td:last-child::before{color:inherit}
+@media (max-width:767px){
+  .home .why{background:radial-gradient(60% 22% at 92% 30%,var(--orb-warm),transparent 70%),radial-gradient(60% 22% at 6% 74%,var(--orb-cool),transparent 70%),url(/lines.svg) center top/1400px auto repeat-y}
+  .home .compare-stage{padding:0;border-radius:0;overflow:visible;background:none}
+  .home .compare tbody{display:grid;gap:var(--space-lg)}
+  .home .compare tr,.home .compare tbody tr:first-child{padding:0;border:var(--rule-hair) solid var(--glass-edge);border-radius:var(--radius-lg);overflow:clip;background:var(--glass);-webkit-backdrop-filter:var(--frost);backdrop-filter:var(--frost);box-shadow:var(--shadow-soft)}
+  .home .compare tbody th{margin:0;padding:var(--space-lg) var(--space-lg) var(--space-sm);font:400 var(--text-title)/var(--lh-title) var(--font-display);letter-spacing:var(--tracking-title)}
+  .home .compare td:nth-child(2){padding:var(--space-sm) var(--space-lg) var(--space-lg)}
+  .home .compare td:nth-child(2)::before{padding-inline-start:1.3em;background:linear-gradient(45deg,transparent 44%,currentColor 44% 56%,transparent 56%) 0 50%/.8em .8em no-repeat,linear-gradient(-45deg,transparent 44%,currentColor 44% 56%,transparent 56%) 0 50%/.8em .8em no-repeat}
+  .home .compare td:last-child{margin:0;padding:var(--space-md) var(--space-lg) var(--space-lg);border:0;border-radius:0;background:var(--color-deep);color:var(--color-paper-hi);box-shadow:none;font-size:var(--text-lead);line-height:var(--lh-lead)}
+}
+@media (min-width:768px){
+  .home .compare td:last-child,.home .compare thead th:last-child{background:var(--color-deep);color:var(--color-paper-hi);border-inline:0}
+  .home .compare td:last-child{border-block-end-color:var(--color-rule-dark)}
+  .home .compare tbody tr:hover>*{background-color:transparent}
+  .home .compare tbody tr:hover>:not(:last-child){background-color:var(--glass-hi)}
+  .home .compare tbody tr:hover>:last-child{background-color:var(--color-deep)}
+}
