@@ -347,7 +347,7 @@ th{text-align:start;font-weight:500}
 .home .ledger tbody th,.home .ledger td{padding:var(--space-lg)}
 .home .ledger td strong{font:400 var(--text-title)/var(--lh-title) var(--font-display);letter-spacing:var(--tracking-title);margin-block-end:var(--space-sm)}
 .home .ledger td strong a{text-decoration-color:var(--color-accent);text-decoration-thickness:2px;text-underline-offset:.22em}
-.home .ledger .seg-name{color:var(--color-sand)}
+.home .ledger .seg-name{color:var(--color-accent);font:500 var(--text-md)/var(--lh-label) var(--font-body);opacity:1}
 .home .ledger tbody{display:grid;gap:var(--space-md)}
 .home .ledger tbody tr{display:block}
 .home .ledger tbody th,.home .ledger td{display:block;inline-size:auto}
@@ -374,7 +374,7 @@ th{text-align:start;font-weight:500}
 /* How we are paid: the promise set large. */
 .home .fee .wrap{padding-block:var(--section-gap-s)}
 .home .fee-line .lede{font:400 var(--text-title)/var(--lh-title) var(--font-display);letter-spacing:var(--tracking-title);max-inline-size:26ch}
-.home .fee-line h2{color:var(--color-sand)}
+.home .fee-line h2{color:var(--color-accent)}
 
 /* Contact: the card floats on the same light. */
 .home .contact{background:radial-gradient(38% 70% at 78% 40%,var(--orb-warm),transparent 70%),url(/lines.svg) center top/max(100%,1400px) auto repeat-y}
