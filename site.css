@@ -22,7 +22,7 @@
   --color-sand:oklch(80% 0.062 82); --color-teal:oklch(62% 0.07 185);
   --glass:color-mix(in oklab,var(--color-paper-hi) 34%,transparent); --glass-hi:color-mix(in oklab,var(--color-paper-hi) 66%,transparent);
   --glass-edge:color-mix(in oklab,var(--color-paper-hi) 85%,transparent);
-  --glass-night:color-mix(in oklab,color-mix(in oklab,var(--color-paper-hi) 9%,var(--color-deep)) 86%,transparent); --night-veil:color-mix(in oklab,var(--color-deep) 62%,transparent); --glass-night-edge:color-mix(in oklab,var(--color-paper-hi) 18%,transparent);
+  --glass-night:color-mix(in oklab,color-mix(in oklab,var(--color-paper-hi) 9%,var(--color-deep)) 86%,transparent); --night-veil:color-mix(in oklab,var(--color-deep) 62%,transparent); --paper-veil:color-mix(in oklab,var(--color-paper) 68%,transparent); --glass-night-edge:color-mix(in oklab,var(--color-paper-hi) 18%,transparent);
   --orb-warm:color-mix(in oklab,var(--color-accent) 46%,transparent); --orb-cool:color-mix(in oklab,var(--color-teal) 42%,transparent);
   --shadow-soft:0 1px 1px color-mix(in oklab,var(--color-ink) 5%,transparent),0 12px 40px -12px color-mix(in oklab,var(--color-ink) 22%,transparent);
   --frost:blur(14px) saturate(1.6);
@@ -378,7 +378,9 @@ th{text-align:start;font-weight:500}
 .home .fee-line h2{color:var(--color-accent)}
 
 /* Contact: the card floats on the same light. */
-.home .contact{background:radial-gradient(38% 70% at 78% 40%,var(--orb-warm),transparent 70%),url(/lines.svg) center top/max(100%,1400px) auto repeat-y}
+.home .contact{background:linear-gradient(var(--paper-veil),var(--paper-veil)),url(/lines.svg) center top/max(100%,1400px) auto repeat-y}
+.home .who-head .lede,.home .contact .lede{font-weight:500}
+.home .contact .card{background:var(--color-paper-hi)}
 .home .card{border-radius:var(--radius-lg);background:var(--glass);border-color:var(--glass-edge);-webkit-backdrop-filter:var(--frost);backdrop-filter:var(--frost);box-shadow:var(--shadow-soft)}
 .btn{transition:background-color var(--dur-short) var(--ease-out),transform var(--dur-short) var(--ease-out)}
 .btn:hover{transform:translateY(-1px)}
