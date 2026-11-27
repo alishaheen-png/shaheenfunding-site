@@ -396,3 +396,11 @@ th{text-align:start;font-weight:500}
 @keyframes draw{from{transform:scaleX(0)}}
 @keyframes fade{from{opacity:0}}
 @keyframes route{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+
+/* Pinned steps, compact size: site.js adds .tight when the full-size cards would not fit the screen. */
+.home .how.pin.tight .wrap{padding-block:var(--space-md)}
+.home .how.pin.tight h2{font-size:var(--text-title);line-height:var(--lh-title);letter-spacing:var(--tracking-title)}
+.home .how.pin.tight .steps{margin-block-start:var(--space-md)}
+.home .how.pin.tight .steps>li{padding:var(--space-lg);row-gap:var(--space-xs)}
+.home .how.pin.tight .steps h3{font-size:var(--text-title);line-height:var(--lh-title)}
+.home .how.pin.tight .steps>li>p,.home .how.pin.tight .steps .docs-wrap{font-size:var(--text-md);line-height:var(--lh-body)}
