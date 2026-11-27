@@ -152,6 +152,7 @@ th{text-align:start;font-weight:500}
 .steps>li{display:grid;grid-template-columns:minmax(88px,22%) minmax(0,1fr);column-gap:var(--space-md);row-gap:var(--space-xs);padding-block:var(--space-lg);border-block-start:var(--rule-hair) solid var(--color-ink)}
 .steps>li>*{grid-column:2}
 .steps .docs-wrap p{margin:0 0 var(--space-xs)}
+.steps .docs-wrap ul+p{margin:var(--space-sm) 0 0}
 .steps .docs{list-style:none;padding:0;margin:0;display:grid;row-gap:var(--space-xs)}
 .steps .docs li{position:relative;padding-inline-start:var(--space-md)}
 .steps .docs li::before{content:"";position:absolute;inset-inline-start:0;inset-block-start:.7em;inline-size:6px;block-size:6px;border-radius:50%;background:var(--color-ink)}
@@ -423,7 +424,7 @@ th{text-align:start;font-weight:500}
 /* The one sideways passage: the four steps pin and travel left as the page scrolls. site.js adds .pin; without it the steps stay a plain grid. */
 .home .how.pin .wrap{position:sticky;top:var(--nav-h);block-size:calc(100svh - var(--nav-h));display:flex;flex-direction:column;justify-content:center;padding-block:var(--space-lg)}
 .home .how.pin .steps{display:flex;flex-wrap:nowrap;gap:var(--space-lg);margin-block-start:var(--space-xl);will-change:transform}
-.home .how.pin .steps>li{flex:0 0 var(--step-w);min-block-size:min(44svh,360px);grid-row:auto;grid-template-rows:none;align-content:start;row-gap:var(--space-md);padding:var(--space-xl)}
+.home .how.pin .steps>li{flex:0 0 var(--step-w);grid-row:auto;grid-template-rows:none;align-content:start;row-gap:var(--space-md);padding:var(--space-xl)}
 .home .how.pin .steps h3{font-size:var(--text-step);line-height:var(--lh-section)}
 .home .how.pin .steps>li>p,.home .how.pin .steps .docs-wrap{font-size:var(--text-lead);line-height:var(--lh-lead)}
 .home .how.pin .steps .when{font:var(--label)}
